@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+     /* 
+     1. 先比较权值最大的选择器id，则div.word没有，第一个淘汰
+     2. 比较下一个权值比较大的，类选择器.word,则#box 没有，被淘汰
+     3. 比较标签选择器div，则.word#box选择器被淘汰
+     4. 则div.word#box 权值最大
+      */
+     /* 2个id选择器，2个类选择器，优先级搞 */
+      /* .five#radio .one #three {
+
+      } */
+
+      /* 2个id选择器，一个类选择器，优先级低 */
+      /* #box #btn .four div span {
+
+      } */
+     
+     /* #box {
+          color: green;
+     }
+     div.word {
+          color: yellow;
+     }
+     div.word#box {
+          color: blue;
+     }
+     .word#box {
+          color: red;
+     } */
+
+     /* div {
+          color:  red !important;
+     } */
+
+     p {
+          color: red !important;
+     }
+    </style>
+</head>
+<body>
+     <p>
+          <!-- 颜色红色 -->
+          我是p标签
+          <!-- 颜色仍然为黑色，不是浏览器默认设置，而是不支持嵌套 -->
+          <div>我是div</div>
+     </p>
+     <!-- <div>我是div
+          <br>
+          <span>我是span</span>
+          <br> -->
+          <!-- a元素，浏览器有默认设置颜色 -->
+          <!-- <a href="http://">小码哥官网</a>
+     </div> -->
+    <!-- 内联样式有效 -->
+<!-- <div id="box" class="word" style="color: gray;">一段文字</div> -->
+</body>
+</html>

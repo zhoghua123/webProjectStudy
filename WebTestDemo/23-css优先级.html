@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #box {
+            color: red;
+       }
+
+       .word {
+            color: green;
+            /* 最终显示这个字体 */
+            font-size: 20px;
+       }
+
+       div {
+            color: blue;
+       }
+
+       * {
+           /* 显示这个颜色 */
+            color: yellow !important;
+            /*  */
+            font-size: 50px;
+       }
+    </style>
+</head>
+<body>
+    <!-- 内联样式有效 -->
+<div id="box" class="word" style="color: gray;">一段文字</div>
+</body>
+</html>

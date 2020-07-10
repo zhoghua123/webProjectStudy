@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类</title>
+   
+    <style>
+        /* 设置span元素，而且他是父元素中的第二个子元素 */
+        span:nth-child(2) {
+            color: red;
+        }
+        
+    </style>
+</head>
+
+
+<body>
+    <div>
+        <p>p元素</p>
+        <!-- 这个span才是父类的第二个子元素，因此他会被设置red -->
+        <span>span1</span>
+        <span>span2</span>
+        <span>span3</span>
+        <span>span4</span>
+        <span>span5</span>
+    </div>
+    
+    <!-- 选择顺序为aaaa3、aaaa1、aaaa4 -->
+   <!-- <a href="#" tabindex="2">aaaa1</a> -->
+   <!-- 不允许被tab选中，只要设置为-1即可 -->
+   <!-- <a href="#" tabindex="-1">aaaa2</a>
+   <a href="#" tabindex="1">aaaa3</a>
+   <a href="#" tabindex="3">aaaa4</a> -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+   
+    <style>
+       div>span {
+           color: red;
+       }
+      
+    </style>
+</head>
+<body>
+   <span>我是span</span>
+   
+   <div>
+       <!--只有这个span都有效  -->
+       <span>我是span</span>
+       <p>
+           <!-- 无效 -->
+           <span>我是span</span>
+       </p>
+       <div>
+           <!-- 无效 -->
+           <p>p元素</p>
+       </div>
+       <!-- 有效 -->
+       <p>p元素</p>
+       <!-- 无效 -->
+       <p>p元素</p>
+    </div>
+    <div class="one">div元素</div>
+    <div class="one" title="test">div元素</div>
+</body>
+</html>

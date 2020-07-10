@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类</title>
+   
+    <style>
+        /* div内容最前面加 */
+        div::before {
+            content: "666";
+            color: blue;
+        }
+        /* div内容最后面加 */
+        /* div::after {
+            content: "777";
+            color: green;
+        } */
+        /* 加图片 */
+        div::after {    
+            content: url("./imgs/test.png");
+        }
+
+        div {
+            color: red;
+        }
+       
+    </style>
+</head>
+<body>
+   <div>我是div</div>
+</body>
+</html>

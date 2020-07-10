@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+   
+    <style>
+        /* 0. 按钮通用 */
+        .btn {
+            color: #fff;
+            font-size: 18px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            /* 鼠标样式，鼠标移动到元素上的样式 */
+            cursor: pointer;
+        }
+
+       /* 1. 按照颜色分类 */
+       /* 危险 */
+        .danger {
+            background-color: #d73d32;
+        }
+        /* 警告 */
+        .warning {
+            background-color: #f6c12a;
+        }
+        /* 通用 */
+        .normal {
+            background-color: #53a93f;
+        }
+        /* 取消 */
+        .cancel {
+            background-color: #57b5e3;
+        }
+
+       /* 2. 按照角度分类 */
+       /* 圆角 */
+       .round {
+           border-radius: 5px;
+       }
+    </style>
+</head>
+<!-- 
+    需求：项目中有四种类型的按钮
+    1. 危险（danger）
+    2. 警告（warning）
+    3. 通用（normal）
+    4. 取消（cancel）
+    这些按钮可能是圆角、直角
+ -->
+<body>
+    <br>
+    <br>
+    <br>
+
+    <span class="btn normal">确定</span>
+    <span class="btn danger">删除</span>
+    <span class="btn warning">重置</span>
+    <span class="btn cancel round">取消</span>
+    
+</body>
+</html>

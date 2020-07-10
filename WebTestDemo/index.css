@@ -1,0 +1,7 @@
+@charset "UTF-8";
+div {
+    /* 设置颜色 */
+    color: white; 
+    /* 设置背景 */
+    background:red;
+}

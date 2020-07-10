@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+   
+    <style>
+        /* 用于筛选元素的属性名 */
+      [title] {
+          color: red;
+      }
+      /* 所有拥有href属性的元素都有效 */
+      [href] {
+          background-color: green;
+      }
+      /* 属性title的值为two的元素有用 */
+      [title="two"] {
+          color: blue;
+      }
+      /* tile属性值中包含one单词 */
+      [title~="one"] {
+          color: purple;
+      }
+      /* 属性tile值恰好等于one或者以单词one开头且后面紧跟中划线连字符的元素有效 */
+      [title|="one"] {
+        color: yellow;
+      }
+      /* 表示属性title值以one开头的元素就有效 */
+      [title^="one"] {
+        color: gray;
+      }
+      /* 表示属性title值以one结尾的元素就有效 */
+      [title$="one"] {
+        color: brown;
+      }
+      /* 表示属性title值只要包含one的元素就有效 */
+      [title*="one"] {
+        color: blueviolet;
+      }
+    </style>
+</head>
+<body>
+    <span title="one">我是span</span>
+    <span title="two">我是span</span>
+    <span title="fff one xxx">我是span</span>
+    <span title="one-xxx">我是span</span>
+    <span title="onexxx">我是span</span>
+    <span title="xxxone">我是span</span>
+    <span title="xxxonexxx">我是span</span>
+    <a href="https:www.baidu.com">百度</a>
+    <a href="https:www.JD.com">京东</a>
+    <a href="https:www.163.com">网易</a>
+</body>
+</html>

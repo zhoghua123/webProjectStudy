@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* 继承 */
+            color: red;
+            /* 不继承 */
+            width: 200px;
+            height: 200px;
+            /* 不继承 */
+            background-color: blue;
+            /* 不继承 */
+            border: 2px solid yellow;
+        }
+        
+        p {
+            /* border默认不继承父类， inherit强制继承父类*/
+            border: inherit;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <p>我是p标签</p>
+</div>
+
+</body>
+</html>

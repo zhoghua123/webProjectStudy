@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+   
+    <style>
+        /* 注意顺序必须是：:link、:visited、:hover、:active，否则无效 */
+        /* 未访问 */
+        a:link {
+            color: red;
+        }
+        /* 鼠标访问后 */
+        a:visited {
+            color: yellow;
+        }
+        /* 长按下去、或者tab键选中 */
+        a:focus {
+            color: purple;
+            /* tab键选中之后不需要边框 */
+            outline: none;
+        }
+
+        /* 鼠标移动上去 */
+        a:hover {
+            color: green;
+        }
+        /* 鼠标点击下去未松开 */
+        a:active {
+            color: blue;
+        }
+        
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        /*:hover/ :active  用在其他元素上 */
+        div:active {
+            color: green;
+        }
+        div:hover {
+            color: blue;
+        }
+
+
+        /* focus使用 */
+
+        /* 输入文本框聚焦 */
+        input:focus {
+            color: red;
+        }
+        /*
+         a元素也能使用foucus伪类，效果跟 active一样
+         :focus建议放在:hover 前面
+        */
+        /* a:focus {
+            color: purple;
+        } */
+    </style>
+</head>
+
+<body>
+    <a href="https://www.360.cn">百度</a>
+    <div>我是div</div>
+
+    <input type="text">
+    <a href="#">hhhhh</a>
+</body>
+</html>

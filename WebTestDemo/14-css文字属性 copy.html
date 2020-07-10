@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>字体属性</title>
+   
+    <style>
+        /* 父元素 */
+        div {
+            /* 就算不设置，也有默认值 */
+            font-size: 20px;
+            /* 注意：如果父元素也为em单位，那么就接着向上找父元素，知道body元素 */
+            /* font-size: 2em; */
+        }
+        /* 子元素 */
+       span {
+           
+           /* 1. 百分比： 这个百分比参照的是父元素div的默认font-size，实际大小为：20px * 200% */
+           /* font-size: 200%; */
+
+           /* 2. em：前面讲过，em的值相对于当前元素的font-size */
+            /* font-size: 20px; */
+            /* width = 2*20px */
+            /* width: 2em; */ 
+
+            /* 但是如果通过em设置自己的font-size呢？ --- em相对的是父元素的font-size */
+            /* 实际值等于：font-size = 2*父元素div的20px = 40px*/
+            font-size: 2em;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <span>我是span</span>
+    </div>
+</body>
+</html>
