@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+    <style>
+        /* textarea缩放 */
+        textarea {
+            resize: none;
+            width: 100px;
+            height: 50px;
+        }
+        fieldset {
+            width: 400px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- action：要提交数据到的服务器地址  method:请求类型 enctype:上传数据编码格式-->
+    <form action="https://www.baidu.com" method="GET" >
+        
+        <fieldset>
+
+            <legend>必填信息</legend>
+
+            <div>
+                <!-- label要绑定的那个input必须加id属性，用for属性绑定 -->
+                <label for="phone">手机：</label>
+                <!-- name：提交服务器参数字段 maxlength:输入最大字数 autofocus：自动聚焦这个文本框 -->
+                <input id="phone" type="text" name="phone" maxlength="11" placeholder="请输入手机号" autofocus><br>
+            </div>
+            <div>
+                <label for="pwd">密码：</label>
+                <input type="password" name="pwd" id="pwd" placeholder="密码"><br>
+            </div>
+            <div>
+                <label for="code">验证码：</label>
+                <input type="text" name="code" id="code" placeholder="请输入验证码">
+                <!-- 由于input是单标签，所以只能通过value来设置内容 -->
+                <input type="button" value="获取验证码">
+            </div>
+        </fieldset>
+        
+
+        <fieldset>
+            <legend>选填信息</legend>
+
+            <div>
+                <label for="photo">照片：</label>
+                <input type="file" id="photo">
+            </div>
+            <div>
+                <!-- 2个单选框的name设置成一样就实现了单选效果，设置value值用于规定传给服务器的值内容 -->
+                性别： 
+                男 <input type="radio" name="sex" value="0" title="男" checked>  
+                女 <input type="radio" name="sex" value="1" title="女">
+            </div>
+            <div>
+                <!-- 多选框除了要设置字段名称name外，还需要设置value值 -->
+                兴趣爱好： 
+                篮球 <input type="checkbox" name="hobby" value="1" title="篮球">  
+                足球 <input type="checkbox" name="hobby" value="2" title="足球" checked> 
+                跑步 <input type="checkbox" name="hobby" value="3" title="跑步">
+            </div>
+            
+            <div>
+                学历
+                <select name="edu" title="学历">
+                    <!-- value也是服务器开发人员决定 -->
+                    <option value="1">小学</option>
+                    <!-- selected默认选中初中 -->
+                    <option value="2" selected>初中</option>
+                    <option value="3">高中</option>
+                </select>
+            </div>
+    
+            <div>
+                <label for="intro">简介</label>
+                <!-- 通常不通过cols、rows来控制宽高，通过css的wh来设置 -->
+                <!-- <textarea name="intro" id="intro" cols="30" rows="10"></textarea> -->
+                <textarea name="intro" id="intro"></textarea>
+            </div>
+        </fieldset>
+
+        
+        <div>
+            <!-- reset只针对放到当前form内的元素才有效 -->
+            <input type="reset" value="重置">
+            <!--submit：只提交当前form的表单数据 而且 只提交表单设置name值的数据 -->
+            <input type="submit" value="提交">
+        </div>
+        
+    </form>
+
+    <br><br><br>
+    
+    <form action=https://www.baidu.com>
+
+        <input type="text" name="phone">
+        <!-- 这3个按钮效果跟input设置tpye一样 -->
+        <button type="button">普通按钮</button>
+        <button type="reset">重置按钮</button>
+        <button type="submit">提交按钮</button>
+
+    </form>
+    
+</body>
+</html>
