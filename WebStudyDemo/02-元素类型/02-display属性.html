@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mail li{
+            list-style: none;
+        }
+        .mail li a {
+            text-decoration: none;
+            font-size: 13px;
+            color: #000;
+            /* 将a标签转为块级 */
+            display: block;
+        }
+        .mail li a:hover {
+            background-color: #0ff;
+        }
+        .mail ul {
+            padding: 0;
+            margin: 0;
+            /* width: 100px; */
+            display: none;
+            border: 1px solid #999;
+        }
+        .mail .title {
+            background-color: #999;
+            /* 放到父元素更好 */
+            /* width: 100px; */
+            /* 行内->块级 */
+            display: block;
+        }
+        /* 兄弟选择器：聚焦而且找到ul */
+        /* .mail .title:hover+ul {
+            display: block;
+        } */
+        /* 父控件 */
+        .mail {
+            width: 100px;
+            /* 子元素内容全部居中 */
+            text-align: center;
+        }
+        /* 当鼠标移动到mail上时，将它里面的ul元素显示出来 */
+        .mail:hover ul{
+            display: block ;
+        }
+    </style>
+</head>
+<body>
+<div class="mail">
+    <span class="title">邮箱</span>
+    <ul>
+        <li><a href="#">QQ邮箱</a></li>
+        <li><a href="#">126邮箱</a></li>
+        <li><a href="#">139邮箱</a></li>
+    </ul>
+</div>
+    <!-- <span>我是span1</span>
+    <span>我是span2</span> -->
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span:nth-of-type(odd) {
+            background-color: #f00;
+        }
+        span:nth-of-type(even) {
+            background-color: #0f0;
+        }
+
+        /* 父元素的font-size设置为0 */
+        div {
+            font-size: 0;
+        }
+        /* 子元素设置自己的font-size */
+        div span {
+             font-size: 12px;
+         }
+    </style>
+</head>
+<body>
+    <!-- 默认情况下每个内容之间都会有一个空格 -->
+    <span>span1</span>
+    <span>span2</span>
+    <span>span3</span>
+    <span>span4</span>
+    <br>
+    <!-- 解决办法：1. 元素之间不留空格 -->
+    <span>span5</span><span>span6</span>
+    <br>
+    <!-- 办法：2. 空格注释掉 -->
+    <span>span7</span><!-- --><span>span8</span>
+    <!-- 办法：3. a.父元素的font-size设置为0  b.子元素设置自己的font-size -->
+    <div>
+        <span>span9</span>      <span>span10</span>
+    </div>
+
+    <span>
+        <div></div>
+    </span>
+</body>
+</html>

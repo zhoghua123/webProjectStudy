@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: #ff0;
+            width: 400px;
+            height: 200px;
+            font-size: 20px;
+            /* 计算结果值：40px */
+            /* line-height: 200%; */
+
+            line-height: 1.5;
+            
+        }
+        span {
+            background-color: #f00;
+            font-size: 30px;
+            /* 父元素为200%该值为父元素计算结果值：40px ； 父元素为1.5，该值为1.5*30= 45 */
+            line-height: inherit;
+        }
+        strong {
+            background-color: #0f0;
+            font-size: 30px;
+            /* 这个这个行高没用，以上面80px行高为准 */
+            /* line-height: 50px; */
+        }
+        div {
+            font: italic small-caps 700 20px/40px "微软雅黑";
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>我是span</span>
+        <strong>我是strong</strong>
+    </div>
+</body>
+</html>

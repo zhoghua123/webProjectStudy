@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用搜索</title>
+   
+</head>
+<body>
+    <!-- 百度搜索 -->
+    <form action="https://www.baidu.com/s" target="_blank">
+        <input type="text" name="wd" placeholder="请输入搜索关键词">
+        <button type="submit">百度一下</button>
+    </form>
+    <!-- 搜狗搜歌 -->
+    <form action="https://www.kugou.com/yy/html/search.html" target="_blank" >
+        <input type="text" name="searchKeyWord" placeholder="请输入搜索关键词">
+        <select name="searchType">
+            <option value="song">单曲</option>
+            <option value="special">歌单</option>
+            <option value="mv">MV</option>
+        </select>
+        <button type="submit">酷狗搜索</button>
+    </form>
+    <!--
+         汽车之家
+         accept-charset="GB2312" 参数编码格式为GB2312
+         默认为UTF-8
+     -->
+    <form action="https://sou.autohome.com.cn/zonghe" target="_blank" accept-charset="GB2312">
+        <input type="text" name="q" placeholder="请输入搜索关键词">
+        <button type="submit">汽车之家</button>
+    </form>
+
+    <!-- 隐藏域 -->
+    <form action="https://www.baidu.com/">
+        <input type="text" name="phone">
+        <!-- 隐藏域，默认附加传参，偷偷传入密码 -->
+        <input type="hidden" name="pwd" value="1">
+        <button type="submit">提交</button>
+    </form>
+</body>
+</html>
