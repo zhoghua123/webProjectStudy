@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding-left: 50px;
+            padding-top: 50px;
+        }
+        .box {
+            width: 200px;
+            height: 300px;
+            border: 1px solid #d7d7d9;
+            /* 该控件所有属性都有动画 */
+            transition: all 1s;
+        }
+        .box:hover {
+            box-shadow: 0 0 30px rgba(0, 193, 222, .5) ;
+            border-color: #00c1dc;
+        }
+        .box:hover .title {
+            background-color: #00c1dc;
+            color: #fff;
+        }
+        .title {
+            background-color: #d7d7d9;
+            height: 150px;
+            margin: 0;
+            line-height: 150px;
+            text-align: center;
+            font-size: 30px;
+            transition: all 1s;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h3 class="title">更多设置</h3>
+</div>
+</body>
+</html>

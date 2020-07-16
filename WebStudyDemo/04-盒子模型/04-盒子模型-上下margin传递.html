@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+            /* 父元素也必须是块级，否则也不会传递 */
+            /* display: inline-block; */
+            /* 给父元素设置padding */
+            /* padding-top: 1px; */
+            /* 给父元素设置border */
+            /* border: 1px solid; */
+            padding-top: 40px;
+        }
+        .div2 {
+            width: 100px;
+            height: 100px;
+            background-color: #0f0;
+            /* 子元素设置margin-top，父元素也会被传递 */
+            /* margin-top: 40px; */
+            /* 如果改成非块级，就不会传递了 */
+            /* display: inline-block; */
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <!-- 如果子元素跟父元素顶部不重叠，那么也不会传递 -->
+        <!-- 123 -->
+        <div class="div2"></div>
+    </div>
+    
+</body>
+</html>

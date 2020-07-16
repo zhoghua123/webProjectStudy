@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+       /* 行内非替换 */
+        span {
+            background-color: #f00;
+            /* 这4个属性都不行 */
+            width: 100px;
+            height: 100px;
+            margin-top: 100;
+            margin-bottom: 100;
+            /* 可以 */
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        /* 行内替换 */
+        img {
+            /* 都支持 */
+            width: 40px;
+            height: 40px;
+            margin-left: 40px;
+            margin-bottom: 40px;
+
+        }
+    </style>
+</head>
+<body>
+    <span>55555</span> 
+    <a>999</a>
+    <br>
+    66666
+    <img src="./images/test.png" alt="">
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+        }
+        /* div1/div2同时设置，理论上应该是相加80，但是实际上合并在一起了，为40 */
+        .div1 {
+            margin-bottom: 40px;
+        }
+        .div2 {
+            /* margin-top: 40px; */
+            /* 正数，二者取最大值 */
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+</body>
+</html>

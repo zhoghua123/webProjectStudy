@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            width: 200px;
+            /* 不写height就相当于是auto */
+            /* height: 200px; */
+            background-color: #f00;
+
+            /* 不是块级不会传递 */
+            /* display: inline-block; */
+        }
+        .div2 {
+            width: 100px;
+            height: 100px;
+            background-color: #0f0;
+            margin-bottom: 40px;
+            /* 不是块级不会传递 */
+            /* display: inline-block; */
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2"></div>
+        <!-- 底部不重叠，不会传递 -->
+        <!-- 777 -->
+    </div>
+    666
+</body>
+</html>
