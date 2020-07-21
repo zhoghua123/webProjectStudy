@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 30px;
+        }
+        /* 百度新闻导航背景 */
+        .baidu {
+            width: 400px;
+            height: 50px;
+            background-color: #3e98f0;
+            /* 背景图片 */
+            background-image: url("images/bdnews.png");
+            /* 高度固定，宽度自适应 */
+            background-size: auto 30px;
+            /* 不平铺 */
+            background-repeat: no-repeat;
+            /* 背景图片居中显示 */
+            background-position: center;
+        }
+        .car {
+            background-image: url("./images/car.png");
+            /* 不平铺 */
+            background-repeat: no-repeat;
+            background-color: #ff0;
+            /* 背景图片水平居中，垂直靠顶部 */
+            background-position: center top;
+            width: 100px;
+            text-align: center;
+            /* padding只影响内容，不影响背景 */
+            padding-top: 30px;
+        }
+        .suv {
+            background-image: url("./images/car.png");
+            /* 不平铺 */
+            background-repeat: no-repeat;
+            background-color: #0f0;
+            /* 背景图片水平居中，垂直靠顶部 */
+            background-position: left center;
+            width: 60px;
+            height: 50px;
+            /* 文字垂直居中 */
+            line-height: 50px;
+            /* padding只影响内容，不影响背景 */
+            padding-left: 60px;
+        }
+        .xxxx {
+            border: none;
+            color: #fff;
+            /* 
+            同时设置3张背景图片
+             */
+            background-image: url("./images/btn_1.png"),url("./images/btn_3.png"),url("./images/btn_2.png");
+            background-repeat: no-repeat,no-repeat,repeat-x;
+            background-position: left,right;
+            width: 100px;
+            height: 52px;
+        }
+        .slider {
+            width: 100px;
+            height: 32px;
+            /* 
+            同时设置2张背景图片
+             */
+            background-image: url("images/btn_1.png"),
+                              url("images/btn_3.png");
+
+            background-repeat: no-repeat;
+            /* background-repeat: no-repeat,no-repeat; */
+            background-size: auto 32px;
+            /* background-size: auto 32px,auto 32px; */
+            background-position: left,right;
+            /* background-position: left center,right center; */
+            padding: 0 18px;
+        }
+        .slider button {
+            border: none;
+            outline: none;
+            color: #fff;
+            /* 宽高填充父控件div */
+            width: 100%;
+            height: 100%;;
+            /* 背景设置为透明 */
+            background-color: transparent;
+            background-image: url("./images/btn_2.png");
+            /* 背景图片横向平铺 */
+            background-repeat: repeat-x;
+            background-size: auto 32px;
+        }
+    </style>
+</head>
+<body>
+<div class="baidu"></div>
+<div class="car">微型车</div>
+<div class="suv">suv车型</div>
+
+
+<div class="slider">
+    <button type="button">按钮</button>
+</div>
+</body>
+</html>
