@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1,.div2,.div4 {
+            height: 100px;
+            width: 100px;
+            background-color: #f00;
+        }
+        .div3,.div5 {
+            background-color: #ff0;
+            width: 50px;
+            height: 50px;
+        }
+        .div1 {
+            text-align: center;
+            /* line-height== height */
+            line-height: 100px;
+        }
+        span {
+            background-color: #ff0;
+        }
+        .div2 {
+            /* 无法垂直居中 */
+        }
+        .div3 {
+            /* 设置到子元素上 */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* 父元素 */
+        .div41 {
+            /* 父相 */
+           position: relative;
+        }
+        /* 子元素 */
+        .div51 {
+            /* 子绝 */
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+        /* 父元素 */
+        .div4 {
+            /* 父相 */
+           position: relative;
+        }
+        /* 子元素 */
+        .div5 {
+            /* 子绝 */
+            position: absolute;
+            /* 左边距离父控件的一半= 父控件宽度*50% */
+            left: 50%;
+            /* 向左移动当前控件的一半 */
+            margin-left: -25px;
+
+            /* 顶部距离父控件的一半= 父控件高度*50% */
+            top: 50%;
+            /* 向上移动当前控件的一半 */
+            margin-top: -25px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 标准流 -->
+    <!-- 非blcok元素 -->
+    <div class="div1">
+        <span>我是span</span>
+    </div>
+    <br><br><br>
+
+    <!-- block元素 -->
+   <div class="div2">
+       <div class="div3"></div>
+   </div>
+   <br><br><br>
+
+   <!-- 脱标 -->
+   <div class="div4">
+       <div class="div5"></div>
+   </div>
+</body>
+</html>

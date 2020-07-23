@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 300px;
+            background-color: #f00;
+            position: relative;
+        }
+        .child1 {
+            width: 100px;
+            height: 100px;
+            background-color: #0f0;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            z-index: 1;
+        }
+        .child2 {
+            width: 100px;
+            height: 100px;
+            background-color: #00f;
+            position: absolute;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="child1"></div>
+        <div class="child2"></div>
+    </div>
+</body>
+</html>

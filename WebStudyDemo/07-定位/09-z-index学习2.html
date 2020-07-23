@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1,.div2 {
+            width: 300px;
+            height: 300px;
+        }
+        .div1 {
+            background-color: #f00;
+        }
+        .div2 {
+            background-color: #0f0;
+        }
+        .div111,.div222 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        .div11{
+            position: relative;
+            z-index: 5;
+        }
+        .div22 {
+
+        }
+        .div111 {
+            background-color: #ff0;
+            top: 100px;
+            z-index: 21;
+        }
+        .div222 {
+            background-color: #0ff;
+            top: 150px;
+            left: 50px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <!-- relative; 5 -->
+        <div class="div11">
+            <!--21  -->
+            <div class="div111"></div>
+        </div>
+    </div>
+    <div class="div2">
+        <div class="div22">
+            <!-- 10 -->
+            <div class="div222"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .buy-car {
+            background-color: #0f0;
+            width: 70px;
+            height: 70px;
+            margin-top: 70px;
+            /* 让父元素成为定位元素，相对定位 */
+            position: relative;
+        }
+        .car {
+            background-color: #ff0;
+            width: 50px;
+            height: 50px;
+        }
+        .num {
+            background-color: #f00;
+            /* 子绝父相 */
+            position: absolute;
+            top: -5px;
+            right: 0;
+
+
+        }
+        /* .num2 {
+            position: absolute;
+            background-color: #0f0;
+        } */
+    </style>
+</head>
+<body>
+   <div class="buy-car">
+       <div class="car">车</div>
+       <div class="num">数字</div>
+       <!-- <div class="num2">数字</div> -->
+   </div>
+</body>
+</html>

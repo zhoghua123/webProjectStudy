@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1 {
+            width: 250px;
+            height: 250px;
+            background-color: #f00;
+        }
+        .d2 {
+            width: 200px;
+            height: 200px;
+            background-color: #0f0;
+            position: relative;
+        }
+        .d3 {
+            width: 150px;
+            height: 150px;
+            background-color: #00f;
+        }
+        .d4 {
+            width: 70px;
+            height: 70px;
+            background-color: #ff0;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">
+        <div class="d2">
+            <div class="d3">
+                <div class="d4"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- di、d2、d3都是d4的祖先元素 -->
+    <!-- 默认为static 非定位元素 -->
+    <!-- <div class="d1" > -->
+        <!-- 这个是定位元素，而且离d4最近，那么d2就是d4的参照物 -->
+        <!-- <div class="d2" style="position: relative;"> -->
+            <!-- 默认为static 非定位元素 -->
+            <!-- <div class="d3"> -->
+                <!-- 设置绝对定位 -->
+                <!-- <div class="d4" style="position: absolute;"></div>
+            </div>
+        </div>
+    </div> -->
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .movie {
+            position: relative;
+            margin-top: 20px;
+            width: 200px;
+            cursor: pointer;
+        }
+        .movie .imax,.movie .buy {
+            position: absolute;
+        }
+        .movie .imax {
+            left: -15px;
+            top: 10px;
+            height: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        }
+        .movie .buy {
+            color: #fff;
+            background-color: #f00;
+            text-decoration: none;
+            border-radius: 20px;
+            width: 50px;
+            text-align: center;
+            right: 10px;
+            bottom: 10px;
+        }
+        .card {
+            position: relative;
+            width: 200px;
+        }
+        .card .cover{
+            display: none;
+            background-color: rgba(0, 0, 0, .5);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* 挪到父元素上然后cover */
+        .card:hover .cover {
+            display: block;
+        }
+        .card .cover .download {
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            /* 这个元素的参照物是cover */
+            position: absolute;
+            width: 70px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            left: 50%;
+            margin-left: -35px;
+            top: 150px;
+        }
+        .downapp {
+            position: relative;
+            color: #000;
+            text-decoration: none;
+            border: 1px solid #000;
+            width: 100px;
+            display: inline-block;
+            text-align: center;
+            margin-left: 100px;
+        }
+        .downapp:hover .code {
+            display: block;
+        }
+        .code {
+            display: none;
+            position: absolute;
+            top: 100%; /*100%*父元素的高度*/
+            /* 向左挪动图片的一半距离 */
+            left: -129px;
+            /* 向右挪动父控件宽度的一半，50%*父元素的宽度 */
+            margin-left: 50%;
+            margin-top: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 电影相关 -->
+   <div class="movie">
+       <img src="images/movie1.png" alt="">
+       <img class="imax" src="images/car.png" alt="">
+       <a class="buy" href="3">预售</a>
+   </div>
+   
+   <br><br><br>
+   <!-- 蒙版 -->
+   <div class="card">
+       <img src="images/movie1.png" alt="">
+       <!-- 遮盖蒙版 -->
+       <div class="cover"><a class="download" href="">下载</a></div>
+   </div>
+   <br><br><br>
+   <a href="#" class="downapp">
+       下载APP
+       <img src="images/loadapp.png" alt="" class="code">
+   </a>
+</body>
+</html>

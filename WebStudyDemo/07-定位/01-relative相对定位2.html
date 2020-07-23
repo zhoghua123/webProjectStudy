@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        div {
+            overflow: hidden;
+        }
+        /* 
+        效果：无论怎样缩放屏幕，背景图片始终居中
+        图片在div居中计算方法：（img宽度-div宽度）*0.5
+        图片固定宽度为1920px，一半为960px
+        解决方案：
+        往左边移动图片宽度的一半
+        往右边移动div元素宽度的一半
+         */
+        img {
+            position: relative;
+            /* 父元素div的宽度 * 50% */
+            /* left: -50%; */
+
+            /* 往左边移动图片宽度的一半 */
+            left: -960px;
+            /* 往右边移动div元素宽度的一半*/
+            margin-left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./images/mhxy.jpg" alt="">
+    </div>
+</body>
+</html>
