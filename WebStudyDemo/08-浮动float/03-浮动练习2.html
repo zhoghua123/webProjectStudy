@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 重置样式 css reset */
+        ul,li,a,h2{
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+       
+        /* 联系样式 */
+        a:hover {
+            color: #35b5ff;
+        }
+        .container {
+            width: 700px;
+            height: 30px;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+        .container h2 {
+            float: left;
+            font-size: 30px;
+            line-height: 30px;
+            font-weight: 300;
+        }
+        .container ul {
+            float: left;
+            line-height: 30px;
+            margin-left: 20px;
+        }
+        .container li {
+            float: left;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .container .rank {
+            float: right;
+        }
+        .container li .line {
+            background-color: #35b5ff;
+            height: 2px;
+            width: 20px;
+            display: block;
+            margin: 5px auto 0;
+            border-radius: 0.5px;
+            display: none;
+        }
+
+        .container li:hover .line {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <h2><a href="#">剧集 &gt;</a></h2>
+       <ul>
+           <li>
+               <a href="#">最新</a>
+               <span class="line"></span>
+            </li>
+           <li>
+               <a href="#">大陆剧</a>
+               <span class="line"></span>
+            </li>
+           <li>
+               <a href="#">英美剧</a>
+               <span class="line"></span>
+            </li>
+           <li>
+               <a href="#">港台剧</a>
+               <span class="line"></span>
+            </li>
+       </ul>
+       <a href="#" class="rank">剧集排行</a>
+    </div>
+</body>
+</html>
