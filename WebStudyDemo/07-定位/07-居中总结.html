@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .div1,.div2,.div4 {
+        .div1,.div2,.div4,.div6 {
             height: 100px;
             width: 100px;
             background-color: #f00;
@@ -22,6 +22,7 @@
         }
         span {
             background-color: #ff0;
+            height: 40px;
         }
         .div2 {
             /* 无法垂直居中 */
@@ -30,6 +31,7 @@
             /* 设置到子元素上 */
             margin-left: auto;
             margin-right: auto;
+            
         }
         /* 父元素 */
         .div41 {
@@ -65,6 +67,18 @@
             /* 向上移动当前控件的一半 */
             margin-top: -25px;
         }
+
+        .div6 {
+            text-align: center;
+            /* line-height: 100px; */
+            font-size: 0;
+        }
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            /* width: 40px;
+            height: 40px; */
+        }
     </style>
 </head>
 <body>
@@ -84,6 +98,12 @@
    <!-- 脱标 -->
    <div class="div4">
        <div class="div5"></div>
+   </div>
+   <br><br><br>
+
+   <!-- 脱标 -->
+   <div class="div6">
+       <img src="./images/car.png" alt="">
    </div>
 </body>
 </html>

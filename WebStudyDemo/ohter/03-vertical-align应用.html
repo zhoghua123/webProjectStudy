@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 0 auto;
+            border: 1px solid #000;
+            width: 400px;
+            font-size: 14px;
+        }
+        span {
+            background-color: #0f0;
+            font-size: 14px;
+            line-height: 14px;
+        } 
+        strong {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: #0f0;
+            /* margin-bottom: 20px; */
+        }
+        /* 解决掉图片底部空出距离问题：一旦不是baseline对齐，那么底部就不会空出距离 */
+        img {
+            /* vertical-align: top; */
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <!-- 父控件输入内容 -->
+    <!-- 123xxx
+    <span>span</span> -->
+    <img src="./images/test.png" alt="">
+    <!-- <strong>xxx</strong> -->
+</div>
+</body>
+</html>
