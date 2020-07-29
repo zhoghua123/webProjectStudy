@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/* 用于存放公共的样式 */
+
+/* 块级标签内容水平居中 */
+.row {
+    width: 1090px;
+    margin: 0 auto;
+}
+
+/* 区分左边右边，浮动 */
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}

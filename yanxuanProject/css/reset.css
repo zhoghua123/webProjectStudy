@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* 用于存放重置浏览器默认的样式 */
+/* CSS Reset */
+
+/* 重置边距 */
+body, dl, dt, dd, ul, ol, li, 
+h1, h2, h3, h4, h5, h6, pre, p,
+form, button, input, textarea, select,
+table, tr, td, th {
+    margin: 0;
+    padding: 0;
+}
+
+/* 列表去掉左边样式 */
+li {
+    list-style: none;
+}
+
+/* 链接去掉下划线 */
+a {
+    text-decoration: none;
+}
+
+/* 将这些标签设置为不加粗细 */
+h1, h2, h3, h4, h5, h6, strong, b {
+    font-weight: normal;
+}
+
+/* table边框合并,边框间距为0 */
+table {
+    
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 去掉默认的轮廓 */
+button, input, textarea, select, a {
+    outline: none;
+}
+
+/*适配旧浏览器自动给图片加边框；让图片不要以baseline对齐，避免图片底部留空隙 */
+img {
+    border: none;
+    vertical-align: top;
+}

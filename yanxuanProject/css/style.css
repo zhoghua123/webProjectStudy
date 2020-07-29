@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+.site-nav {
+    height: 30px;
+    background-color: #333;
+    line-height: 36px;
+}
