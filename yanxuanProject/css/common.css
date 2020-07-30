@@ -6,6 +6,7 @@
 .row {
     width: 1090px;
     margin: 0 auto;
+    position: relative;
 }
 
 /* 区分左边右边，浮动 */

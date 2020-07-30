@@ -1,7 +1,189 @@
 @charset "UTF-8";
 
+body {
+    background-color: #fff;
+    /* 网页默认字体 */
+    font-size: 12px;
+}
+/* 网页导航 */
 .site-nav {
-    height: 30px;
+    height: 36px;
     background-color: #333;
     line-height: 36px;
+}
+.site-nav a {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.site-nav .slogan {
+    float: left;
+    margin-right: 30px;
+}
+.site-nav .notice-list {
+    float: left;
+    background: url("../images/notice-icon.gif") no-repeat left center;
+    height: 36px;
+    padding-left: 26px;
+    overflow: hidden;
+}
+.site-nav .notice-list a {
+    vertical-align: top;
+    text-decoration: underline;
+    color: #b4a078;
+}
+.site-nav .notice-list a:hover {
+    text-decoration: underline; 
+    color: #fff;
+}
+.site-nav .item {
+    float: left;
+}
+.site-nav .login {
+    margin-right: 20px;
+}
+.site-nav .divider {
+    /* 定位 */
+    float: left;
+    /* 盒子模型 */
+    width: 1px;
+    height: 16px;
+    margin: 10px 10px 0;
+    /* 其他 */
+    background-color: #5c5c5c;
+}
+.site-nav .download-app::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 11px;
+    background: url("../images/component.png") no-repeat 0 0;
+    margin-right: 6px;
+}
+
+.site-nav .service::after {
+    content: "";
+    display: inline-block;
+    /* 定位 */
+    width: 11px;
+    height: 5px;
+    margin-left: 10px;
+    
+    background: url("../images/component.png") no-repeat 0 -321px;
+    vertical-align: middle;
+}
+.site-nav .service:hover::after {
+    transform: rotate(180deg);
+}
+
+/* 功能导航 */
+.func-nav {
+    height: 204px;
+}
+
+.func-nav .logo {
+    width: 180px;
+    height: 60px;
+    background: url("../images/component.png") no-repeat 0 -146px;
+    /* 块级标签水平居中 */
+    margin: 50px auto 0;
+
+}
+.func-nav .logo a {
+    display: block;
+    height: 60px;
+    /* 字体隐藏 */
+    font-size: 0;
+}
+
+.func-nav .shop-car {
+    position: absolute;
+    right: 9px;
+    top: 65px;
+    width: 34px;
+    height: 32px;
+}
+
+/* car/count的参照物为最邻近的定位祖先元素，父元素shop-car为定位元素，所以参照物就是它 */
+
+/* 购物车、红点都相对于付元素定位 */
+.func-nav .shop-car .car {
+    /* 定位 */
+    position: absolute;
+    /* 左下角 */
+    left: 0;
+    bottom: 0;
+
+    /* 盒子 */
+    width: 23px;
+    height: 23px;
+
+    /* 其他 */
+    background: url("../images/component.png") no-repeat 0 -113px;
+   
+}
+
+.func-nav .shop-car:hover .car {
+    background-position: 0 -80px;
+}
+.func-nav .shop-car .count {
+    /* 定位 */
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    /* 盒子 */
+    width: 19px;
+    height: 19px;
+
+    /* 文字 */
+    color: #fff;
+    text-align: center;
+    font-size: 12%;
+    line-height: 19px;
+
+    /* 其他 */
+    background: url("../images/component.png") no-repeat 0 -51px;
+
+}
+
+/* 整个搜索框控件 */
+.func-nav .search {
+    position: absolute;
+    top: 75px;
+    right: 60px;
+
+}
+
+.func-nav .search input {
+
+    width: 252px;
+    height: 22px;
+    line-height: 22;
+    border: none;
+
+    font-size: 12px;
+    color: #333;
+    border-bottom: 1px solid #d8cebc;
+}
+/* 相对于父元素定位 */
+.func-nav .search .placeholder {
+    position: absolute;
+    top: 5px;
+    left: 2px;
+
+    color: #999;
+}
+
+.func-nav .search .button {
+    float: right;
+    width: 20px;
+    height: 20px;
+    /* 其他 */
+    background: url("../images/component.png") no-repeat 0 -291px;
+    cursor: pointer;
+
+}
+.func-nav .search .button:hover {
+    background-position: 0 -261px;
 }

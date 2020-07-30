@@ -12,6 +12,11 @@ table, tr, td, th {
     padding: 0;
 }
 
+/* 这两个标签默认斜体 */
+i,em {
+    font-style: normal;
+}
+
 /* 列表去掉左边样式 */
 li {
     list-style: none;
