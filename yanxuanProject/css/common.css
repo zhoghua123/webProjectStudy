@@ -16,3 +16,18 @@
 .right {
     float: right;
 }
+
+/* 设置精灵图片,伪类、伪元素要单独抽取出来 */
+.cmp, 
+.site-nav .download-app::before,
+.site-nav .service::after {
+    background: url("../images/component.png"); 
+}
+
+/* 设置聚焦文字颜色 */
+a {
+    color: #333;
+}
+a:hover {
+    color: #b4a078;
+}

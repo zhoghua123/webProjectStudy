@@ -57,7 +57,9 @@ body {
     display: inline-block;
     width: 7px;
     height: 11px;
-    background: url("../images/component.png") no-repeat 0 0;
+     /* 抽取到common.css 的cmp属性中 */
+    /* background: url("../images/component.png") no-repeat 0 0; */
+    background-position: 0 0;
     margin-right: 6px;
 }
 
@@ -69,7 +71,8 @@ body {
     height: 5px;
     margin-left: 10px;
     
-    background: url("../images/component.png") no-repeat 0 -321px;
+    /* background: url("../images/component.png") no-repeat 0 -321px; */
+    background-position: 0 -321px;
     vertical-align: middle;
 }
 .site-nav .service:hover::after {
@@ -78,16 +81,36 @@ body {
 
 /* 功能导航 */
 .func-nav {
+    /* height: 204px; */
+    /* 设置阴影 */
+    box-shadow: 0 0 30px 0 rgba(0,0,0,.2);
+}
+.func-nav .row {
+    /* 清除浮动 */
     height: 204px;
 }
 
 .func-nav .logo {
+
+    /* 
+    块级标签水平居中,margin-top会传递给父元素，因此采用绝对定位
+    为何不用父控件设置padding-top？设置padding会扩大盒子
+     */
+    /* margin: 50px auto 0; */
+    
+    /* 参照物为最近的父类定位元素，此时为.row, row已经设置为relative */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
     width: 180px;
     height: 60px;
-    background: url("../images/component.png") no-repeat 0 -146px;
-    /* 块级标签水平居中 */
-    margin: 50px auto 0;
 
+     /* 抽取到common.css 的cmp属性中 */
+    /* background: url("../images/component.png") no-repeat 0 -146px; */
+    background-position: 0 -146px;
 }
 .func-nav .logo a {
     display: block;
@@ -119,7 +142,8 @@ body {
     height: 23px;
 
     /* 其他 */
-    background: url("../images/component.png") no-repeat 0 -113px;
+    /* background: url("../images/component.png") no-repeat 0 -113px; */
+    background-position: 0 -113px;
    
 }
 
@@ -143,7 +167,8 @@ body {
     line-height: 19px;
 
     /* 其他 */
-    background: url("../images/component.png") no-repeat 0 -51px;
+    /* background: url("../images/component.png") no-repeat 0 -51px; */
+    background-position: 0 -51px;
 
 }
 
@@ -152,7 +177,6 @@ body {
     position: absolute;
     top: 75px;
     right: 60px;
-
 }
 
 .func-nav .search input {
@@ -180,11 +204,46 @@ body {
     width: 20px;
     height: 20px;
     /* 其他 */
-    background: url("../images/component.png") no-repeat 0 -291px;
+    /* background: url("../images/component.png") no-repeat 0 -291px; */
+    background-position: 0 -291px;
     cursor: pointer;
 
 }
 
 .func-nav .search .button:hover {
     background-position: 0 -261px;
+}
+
+.func-nav .tab-nav {
+    /* 固定底部*/
+    position: absolute;
+    bottom: 10px;
+    /* background-color: #f00; */
+    width: 100%;
+    margin-bottom: 10px;
+}
+.func-nav .tab-nav .item {
+    height: 23px;
+    float: left; 
+    margin: 0 24px;
+    font-weight: 700;
+    font-size: 14px;
+}
+/* 设置下划线与文字举例 */
+.func-nav .tab-nav .item a {
+    display: block;
+    padding-bottom: 5px;
+}
+
+.func-nav .tab-nav .item:hover a,
+.func-nav .tab-nav .item.selected a {
+    color: #b4a078;
+    border-bottom: 2px solid #b4a078;
+}
+/* 左边分割线 */
+.func-nav .tab-nav .divider {
+    float: left;
+    width: 1px;
+    height: 20px;
+    background-color: #ccc;
 }
