@@ -2,6 +2,22 @@
 
 /* 用于存放公共的样式 */
 
+/* 将清除浮动单独封装起来 */
+.clear-fix::after {
+    content: "";
+    display: block;
+    clear: both;
+    /* 兼容旧浏览器 */
+    height: 0;
+    /* 兼容旧浏览器 */
+    visibility: hidden;
+}
+.clear-fix {
+    /* 兼容IE6~7浏览器 */
+    *zoom: 1;
+}
+
+
 /* 块级标签内容水平居中 */
 .row {
     width: 1090px;
@@ -31,3 +47,62 @@ a {
 a:hover {
     color: #b4a078;
 }
+
+/* 通用按钮，上一页、下一页 */
+.arrow-btn {
+    /* 按钮悬浮，所以是绝对定位 */
+    position: absolute;
+    top: 200px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: url("../images/icon-normal.png") #d0c4af;
+    cursor: pointer;
+}
+.arrow-btn:hover {
+    background-color: #b19d79;
+}
+
+/* 上下翻页按钮 */
+.arrow-btn.pre {
+    background-position: 0 -4700px;
+}
+
+.arrow-btn.next {
+    background-position: 0 -4880px;
+}
+
+
+/* 通用标题 */
+.header {
+    margin-bottom: 20px;
+}
+.header .title {
+    float: left;
+    margin-right: 20px;
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 700;
+}
+.header .subtitle {
+    float: left;
+    margin-top: 13px;
+    font-size: 14px;
+    line-height: 1;
+}
+.header .more {
+    float: right;
+    font-size: 14px;
+    line-height: 1;
+    margin-left: 30px;
+    margin-top: 14px;
+}
+
+/* 图片聚焦放大动画 */
+.img-scale img {
+    transition: transform 1s;
+}
+.img-scale:hover img {
+   transform: scale(1.05); 
+} 

@@ -84,6 +84,13 @@ body {
     /* height: 204px; */
     /* 设置阴影 */
     box-shadow: 0 0 30px 0 rgba(0,0,0,.2);
+    /* 
+    定位元素，才能使用z-index，
+    要比main层高，才能显示出阴影，默认被main覆盖住了阴影
+     */
+    position: relative;
+    z-index: 1;
+
 }
 .func-nav .row {
     /* 清除浮动 */
@@ -247,3 +254,128 @@ body {
     height: 20px;
     background-color: #ccc;
 }
+
+/* main部分 */
+
+/* 轮播图,设置图片始终保持居中显示 */
+.slider {
+    overflow: hidden;
+    position: relative;
+}
+.slider .image-list {
+   position: relative; 
+   left: -960px;
+   margin-left: 50%;
+
+   height: 420px;
+}
+.slider .image-list li {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* 上下翻页按钮 */
+.slider .pre {
+    left: 150px;
+}
+
+.slider .next {
+    right: 150px;
+}
+
+/* 页码指示器 */
+.slider .page-list {
+    position: absolute;
+    bottom: 10px;
+    width: 400px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.slider .page-list li {
+    display: inline-block;
+    margin-right: 10px;
+    /* li垂直方向居中 */
+    vertical-align: middle;
+}
+.slider .page-list button {
+    display: block;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border: none;
+    cursor: pointer;
+    background-color: #bfbbba;
+}
+.slider .page-list button:hover,
+.slider .page-list .active button
+{
+    box-shadow: 0 0 0 4px #dfcead;
+    border: 2px solid #b4a078;
+    background-color: transparent;
+}
+
+.brand {
+    margin-top: 30px;
+}
+
+.brand .item {
+    position: relative;
+    float: left;
+    text-align: center;
+    color: #666;
+    overflow: hidden;
+}
+.brand .item img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.brand .item .name {
+    font-size: 24px;
+    margin: 48px 0 19px;
+    font-weight: normal;
+}
+
+.brand .item .price {
+    display: inline-block;
+    border-top: 1px solid #666;
+    padding-top: 17px;
+}
+
+.brand .item .name,
+.brand .item .price {
+    position: relative;
+    z-index: 1;
+}
+.brand .large {
+    width: 357px;
+    height: 320px;
+    margin-right: 9px;
+}
+.brand .small {
+    width: 357px;
+    height: 155px;
+    text-align: left;
+    /* padding-left: 20px; */
+}
+
+.brand .small .name {
+    margin: 32px 0 10px 20px;
+    font-size: 20px;
+
+}
+
+.brand .small .price {
+    margin-left: 20px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+.brand .last{
+    margin-top: 10px;
+}
+
+
+/* 新品首发 */
