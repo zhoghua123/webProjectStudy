@@ -111,6 +111,7 @@
     <div class="brand row">
         <div class="header clear-fix">
             <div class="left">
+                <!-- 二级标题 -->
                 <h2 class="title"><a href="#">品牌制造商</a></h2>
             <span class="subtitle">厂家直达消费者，剔除品牌溢价</span>
             </div>
@@ -120,6 +121,7 @@
         </div>
         <div class="content clear-fix">
             <a class="item large img-scale" href="#">
+                <!-- 三级标题 -->
                 <h3 class="name">Adidas制造商</h3>
                 <p class="price">35元起</p>
                 <img src="./images/brand_01.jpg" alt="">
@@ -146,7 +148,7 @@
     <div class="new-products row">
         <div class="header clear-fix">
             <div class="left">
-                <h2 class="title"><a href="#">新片首发</a></h2>
+                <h2 class="title"><a href="#">新品首发</a></h2>
             <span class="subtitle">周一周四上新，为你寻见时间好物</span>
             </div>
             <div class="right">
@@ -154,8 +156,30 @@
             </div>
         </div>
         <div class="content clear-fix">
-            
+            <div class="product">
+                <a href="#" class="image-box">
+                    <img src="images/new-products_01.png" alt="">
+                    <span class="tag">2色可选</span>
+                    <img src="images/new-products_01_02.jpg" alt="" class="cover">
+                </a>
+                <div class="info">
+                    <p class="attrs">
+                        <span class="attr hot">爆品</span>
+                        <span class="attr">加价购</span>
+                        <span class="attr special">APP特惠</span>
+                    </p>
+                    <h3 class="name one-line">
+                        <a href="#">24寸 纯PC“铝框”（非全铝）拉杆箱哈哈哈哈哈哈哈</a>
+                    </h3>
+                    <p class="price">
+                        <span class="price-value">￥398</span>
+                        <a href="#" class="brand-name">新秀丽制造商</a>
+                    </p>
+                </div>
+            </div>
         </div>
+        <button class="arrow-btn pre"></button>
+        <button class="arrow-btn next"></button>
     </div>
 </div>
 
@@ -164,5 +188,21 @@
 
 </div>
 
+<!-- 引入jQuery -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<!-- 自定义函数 -->
+<script>
+    function removeSpace(){
+        for(var i in arguments){
+            $(arguments[i]).contents().filter(function(){
+                return this.nodeType === 3
+            }).remove();
+        }
+    };
+    $(function(){
+        // 传入指向父元素的选择器
+        removeSpace('.slider .page-list', '.product .attrs');
+    });
+</script>
 </body>
 </html>

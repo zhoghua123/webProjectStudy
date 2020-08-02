@@ -17,6 +17,16 @@
     *zoom: 1;
 }
 
+/* 文字单行显示，超出用省略号显示 */
+.one-line {
+    /*保证内容只显示一行*/
+    white-space: nowrap;
+    /*保证超出的内容不显示*/
+    overflow: hidden;
+    /*也可以设置超出直接减掉 clip*/
+    /* 超出内容用省略号 */
+    text-overflow: ellipsis;
+}
 
 /* 块级标签内容水平居中 */
 .row {
