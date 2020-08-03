@@ -487,3 +487,233 @@ body {
     font-size: 13px;
     line-height: 1;
 }
+
+/* 限时购 */
+.limit {
+    margin-top: 58px;
+}
+
+.limit .time {
+    float: left;
+    background: url("../images/time-bg.jpg") ;
+    width: 224px;
+    height: 377px;
+    text-align: center;
+}
+
+.limit .time .title {
+    height: 36px;
+    margin-bottom: 11px;
+    margin-top: 60px;
+
+    line-height: 36px;
+    font-size: 28px;
+    color: #615548;
+}
+.limit .time .divider {
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    margin-bottom: 18px;
+    background-color: #61594b;
+    
+} 
+.limit .time .subtitle {
+    margin-bottom: 18px;
+    height: 22px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #61594b;
+}
+
+.limit .time .time-ditail {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 50px;
+}
+
+.limit .time .time-ditail .detail {
+   display: inline-block;
+   border-radius: 2px;
+   width: 40px;
+   height: 40px;
+
+   font-size: 18px;
+   color: #fff;
+   background-color: #615548;
+
+}
+
+.limit .time .time-ditail .colon {
+    font-weight: 700;
+    padding: 0 2px;
+    color: #333;
+}
+
+.limit .time .veiw-all {
+    display: inline-block;
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 14px;
+    background-color: #a7936e;
+
+}
+
+.limit .item {
+    float: left;
+    height: 187px;
+    width: 432px;
+    border: 1px solid #f0ece4;
+    border-left: none;
+
+}
+
+.limit .item.list-line {
+    /* 解决边框重合问题 */
+    /* border-top: none; */
+    border-top: -1px;
+}
+.limit .progress-bar {
+    float: left;
+    position: relative;
+    margin-left: 40px;
+    margin-top: 40px;
+    border-radius: 5px;
+    width: 152px;
+    height: 10px;
+    border: 1px solid #f2cecd;
+    overflow: hidden;
+}
+.limit .progress-bar .value {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* width: 100px; */
+    height: 10px;
+    background-color: #ffe5e5;
+}
+
+/* 居家 */
+.topic {
+    margin-top: 60px;
+}
+.topic .cate-list {
+    float: right;
+    padding-top: 14px;
+}
+.topic .cate-list li {
+    float: left;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.topic .cate-list li::before {
+    content: "/";
+    margin: 0 10px;
+}
+.topic .cate-list li:first-child::before {
+    display: none;
+}
+.topic .banner {
+    display: block;
+    height: 310px;
+    margin-bottom: 20px;
+}
+.topic .content {
+    margin-right: -10px;
+}
+.topic .product {
+    width: 265px;
+    margin-right: 10px;
+}
+.topic .product .image-box {
+    width: 265px;
+    height: 265px;
+}
+.topic .product .image-box img {
+    background-color: #f4f4f4;
+}
+
+/* 评论模块 */
+.commnents {
+    margin-top: 60px;
+    padding: 60px 0;
+    background-color: #f4f0ea;
+}
+.commnents .content {
+    margin-right: -12px;
+}
+.commnents .item {
+    position: relative;
+    float: left;
+    width: 355px;
+    height: 492px;
+    margin-right: 12px;
+    background-color: #fff;
+
+}
+.commnents .item .image {
+    width: 355px;
+    height: 355px;
+    display: block;
+    overflow: hidden;
+}
+.commnents .arrow-btn.pre {
+    left: -70px;
+}
+.commnents .arrow-btn.next {
+    right: -70px;
+}
+.commnents .info {
+    position: absolute;
+    bottom: 0;
+    width: 305px;
+    height: 130px;
+    padding: 15px;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+/* footer部分 */
+.footer1 {
+    height: 204px;
+    padding-top: 60px;
+    padding-bottom: 34px;
+    border-top: 1px solid #e8e8e8;
+}
+
+.footer1 .col {
+    float: left;
+    height: 80px;
+    width: 33.33333%;
+    box-sizing: border-box;
+}
+.footer1 .service {
+    /* background-color: #f00; */
+}
+.footer1 .service a {
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    padding-top: 70px;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 14px;
+    background: url("../images/service.png") no-repeat center 20px;
+}
+.footer1 .service a:hover {
+    background-image: url("../images/service2.png");
+}
+.footer1 .what {
+    /* background-color: #ff0; */
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;;
+}
+.footer1 .download {
+    /* background-color: #0f0; */
+}
