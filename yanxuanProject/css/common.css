@@ -112,9 +112,13 @@ a:hover {
 
 /* 图片聚焦放大动画 */
 .img-scale img {
+    /* 适配低版本的safari浏览器 */
+    -webkit-transition: -webkit-transform 1s;
     transition: transform 1s;
 }
 .img-scale:hover img {
+    /* 适配低版本的safari浏览器 */
+    -webkit-transform: scale(1.05);
    transform: scale(1.05); 
 } 
 
