@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //    function add(a,b){
+    //         return a + b;
+    //    }
+    //    var add2 = function(a,b){
+    //         return a + b;
+    //    }
+    //    console.log(add2(3,5));
+
+        //    values打包所有的实参
+    //    function getsum(...values){
+    //        console.log(values)
+    //        var sum = 0;
+    //         for (var i = 0; i < values.length; i++) {
+    //             sum += values[i];
+    //         }
+    //         return sum;
+    //    }
+    //    getsum(10,20);
+    // function sum(a = 10,b= 6){
+    //     return a + b;
+    // }
+
+    // console.log(sum());
+    // sum();
+    /*
+    let 函数名称 = (形参列表)=>{
+        函数体
+    }
+    */
+    // 箭头函数
+    // let sum = (a,b)=>{
+    //     return a + b;
+    // }
+
+    // console.log(sum(10,20));
+
+    // // 省略()
+    // let say = name => {
+    //     console.log("hello");
+    // }
+    // // 省略{}
+    // let say2 = name => console.log("hello");
+        {
+            var a = 10;
+        }
+        // 10，用var修饰，即ES6之前，则a为全局作用域
+        console.log(a);
+
+        // 但是如果用了let，即ES6，那么块作用域外就不能访问到
+        {
+            let b = 10;
+        }
+        // 报错
+        console.log(b);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button>点击</button>
+    <script>
+        // class name {
+        //     // class body
+        // }
+        // // 类必须用new实例化对象
+        // var obj = new name();
+        var that;
+        class Star {
+            constructor (name, age) {
+                // 记录this到that，便于成员函数内部获取,必须放在前面
+                that = this;
+
+                // constructor这里面的this指向的是向实例对象
+                this.name = name;
+                this.age = age;
+                // 要用this
+                this.sing();
+                
+                this.btn = document.querySelector("button");
+                this.btn.onclick = this.sing;
+            }
+            // 方法里面的this，指向该方法的调用者
+            sing(){
+                // 要用this
+                // 当点击按钮时，这个方法的直接调用者是button，而不是当前实例对象
+                console.log(this.name + "唱歌");
+                // 点击按钮时，如何拿到当前实例的this？ 搞一个全局变量记录
+                console.log(that.name + "唱歌");
+
+            }
+        }
+        let ldh = new Star("刘德华");
+        // ldh.sing();
+    </script>
+</body>
+</html>

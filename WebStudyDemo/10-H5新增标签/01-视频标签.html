@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频标签</title>
+</head>
+<body>
+<!--
+meter:
+%30:浏览器兼容,当某些浏览器不支持meter标签时,会显示%30
+progress:
+标签标示任务的进度（进程）
+结合 <progress> 标签与 JavaScript 一同使用，来显示任务的进度。
+注意:<progress> 标签不适合用来表示度量衡（例如，磁盘空间使用情况或查询结果）。如需表示度量衡，请使用 <meter> 标签代替
+-->
+<meter value="30" max="100" min="0" > %30</meter>
+<progress value="40" max="100"></progress>
+<!--
+新建一个目录:资源,放音频视频,方法跟图片一样
+controls(向用户显示控件,比如播放器)
+src(要播放的视频的 URL)
+preload(视频在页面加载时进行加载，并预备播放,默认值是autoplay)
+-->
+<audio src="source/music.m4a" controls="controls"></audio>
+<video src="source/BigBuck.m4v" controls="controls"></video>
+</html>

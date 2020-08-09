@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // alert("hello world");
+        // prompt("请输入内容：");
+        // confirm("你好吗?");
+        // document.write("hello world2");
+        // 等到界面上所有的内容都加载完毕再执行 window.onload
+        // window.onload = function(){
+        //     var oDiv = document.querySelector("div");
+        //     var text = oDiv.innerText;
+        //     alert(text);
+        // }
+
+        // {
+        //     var name = "hhh";
+        // }
+        // console.log(name);
+        // let arr = new Array(3);
+        // // 不会报错，返回undefined
+        // console.log(arr[66])
+        // let arr = new Array(3);
+        // arr[0] = 0;
+        // arr[1] = 1;
+        // arr[2] = 2;
+        // // 动态添加数组长度
+        // arr[3] = 3;
+        // // [0,1,2,3,4]
+        // console.log(arr)
+        // 解构赋值
+        // let arr = [1,3,5];
+        // let a = a[0];
+        // let b = a[1];
+        // let c = c[2];
+        // ES6结构赋值
+        // let [a,b,c] = arr;
+        // let [a,b] = arr;
+        // let [a,b, c] = [3];
+        // let [a,b=4, c=5] = [3];
+        // let [a,...b] = [1,3,5];
+        // // 1
+        // console.log("a="+a);
+        // // [3,5]
+        // console.log("b="+b);
+        // console.log("c="+c);
+        
+    //     var arr1 = new Array();
+    //     // 数组追加新增一条数据,res返回新增后的数组长度
+    //     let res = arr.push(3);
+    //     // 追加多个数据
+    //     arr.push(4,5);
+    //     // 数组最前面插入一条数据
+    //     arr.unshift(1);
+    //     // 插入2条数据
+    //     arr.unshift("m","n");
+    //     // 删除数组最后一条数据,res:删除的数据
+    //     let res2 = arr.pop();
+    //     // 删除数据最前面一条数据
+    //    arr.shift()
+    //     //    删除索引为1的数据
+    //     // 从索引为1的元素开始删除，删除1条数据
+    //     // 参数1，开始位置，参数2：删除多少个
+    //     arr.splice(1,1);
+    
+    // 数组常用方法
+    let arr = [1,2,3,4,5,6,7,8,9];
+    // 1. 清空数组
+    // arr = [];
+    // arr.length = 0;
+    // arr.splice(0,arr.length);
+    // 2. 数组转字符串
+    let arrstr= arr.toString();
+    // 3. 将数组转换为指定格式的字符串
+    // join无参数时，跟toString一样
+    // let arrStr2 = arr.join();
+    // 1+2+3...
+    let arrStr3 = arr.join('+');
+    // 4. 数组拼接
+    let arr1 = [1,3,5];
+    let arr2 = [2,4,6];
+    // 生成一个新的拼接数组
+    //  let newarr = arr1.concat(arr2);
+    // ES6语法拼接
+    let newarr2 = [...arr1,...arr2];
+    // 5. 数组内容反向排序
+    // 注意：该方法会修改原有数组
+     let arrrever = arr.reverse();
+    //  [9,8,7,...]
+     console.log(arrrever);
+    //  [9,8,7,...] 原有数组被修改
+    console.log(arr);
+    // 6. 截取数组中指定位置数据
+    // 左开右闭区间。不包含结束位置
+    // [1,2,3,4,5]=>[2，3]
+    let arrslice = arr.slice(1,3);
+    // 7. 查找元素在数组中的位置
+    // 找到，index为索引 反之，index为-1，如果有多个，默认返回从左到右第一个索引
+    let index = arr.indexOf(3);
+    // 参数1：要查找的数据。参数2：从哪个索引开始查找
+    let index2 = arr.indexOf(3,4);
+    // 从右到左查找
+    let index3 = arr.lastIndexOf(3);
+    // 8. 如何判断数组中是否包含某个元素
+    // 方法1：可以通过7的方法查找，判断index是否为-1
+    // 方法2：ES6语法
+    let find = arr.includes(4);
+
+
+
+    </script>
+</head>
+<body>
+    <!-- 行内式 -->
+    <!-- <div onclick="alert('it666')">我是div</div> -->
+    <div>it666</div>
+    <script type="text/javascript" src="js/01-index.js"></script>
+</body>
+</html>
