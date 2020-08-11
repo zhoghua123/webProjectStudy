@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function fn(){
+            console.log('hello world !');
+            // 默认this指向window
+            console.log(this);
+        }
+        var o = {};
+        // 函数调用
+        fn();
+        // 函数调用
+        fn.call();
+        // 改变this指向，指向o对象
+        fn.call(o);
+
+    </script>
+</body>
+</html>

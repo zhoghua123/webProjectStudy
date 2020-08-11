@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+        function Star(name,age){
+            this.name = name;
+            this.age = age;
+            // 成员函数,
+            // this.sing = function(){
+            //     console.log("我会唱歌");
+            // }
+        }
+        // 成员函数直接赋值给prototype属性
+        Star.prototype.sing = function(){
+                console.log("我会唱歌");
+            }   
+
+        var ldh = new Star('刘德华',18);
+        var zxy = new Star('刘德华',18);
+        // 构造函数的实例对象直接访问prototype对象的成员
+        ldh.sing();
+        zxy.sing();
+        // 返回true
+        console.log(ldh.sing === zxy.sing);
+        // 返回true,构造函数的原型对象与实例对象的原型对象指向同一个对象
+        console.log(ldh.__proto__ === Star.prototype);
+
+        
+    </script>
+</body>
+</html>

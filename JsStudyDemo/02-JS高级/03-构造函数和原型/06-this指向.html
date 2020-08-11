@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+        function Star(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        var that;
+        Star.prototype.sing = function(){
+            that = this;
+            console.log("我会唱歌");
+            // this指向方法的调用者ldh
+            console.log(this);
+        }   
+        var ldh = new Star('刘德华',18);
+        ldh.sing();
+        // true
+        console.log(that === ldh);
+
+        // 扩展内置对象
+        // 为Array扩展一个sum方法
+        Array.prototype.sum = function(){
+            var sum = 0;
+            for(var i = 0;i<this.length;i++){
+                sum+= this[i];
+            }
+            return sum;
+        }
+        var arr = [1,2,3];
+        console.log(arr.sum());
+
+        // 会覆盖系统自带的方法
+        // Array.prototype = {
+        //      sum: function(){
+        //         var sum = 0;
+        //         for(var i = 0;i<this.length;i++){
+        //             sum+= this[i];
+        //         }
+        //         return sum;
+        //     }
+        // }
+        
+    </script>
+</body>
+</html>

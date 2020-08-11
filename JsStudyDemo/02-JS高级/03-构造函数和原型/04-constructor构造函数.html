@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+        function Star(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        // 成员函数直接赋值给prototype属性
+        // Star.prototype.sing = function(){
+        //         console.log("我会唱歌");
+        // }   
+        // Star.prototype.movie = function() {
+        //     console.log("我会演电影");
+        // }
+        // 有多个对象的方法，我们可以给原型对象采取对象形式赋值
+        // 如果我们修改了原来的原型对象，给原型对象赋值的是一个新对象，那么必须手动的利用constructor指回原来的构造函数
+        // 替换掉了Star.prototype默认指向的对象，那么它的constructor的指向肯定也会变化
+        // 创建一个字面常量对象赋值给prototype
+        Star.prototype = {
+            //作用2：手动的利用constructor这个属性指回原来的构造函数
+            constructor:Star,
+            sing: function() {
+                console.log("我会唱歌");
+            },
+            movie: function() {
+                console.log("我会唱歌");
+            }
+        }
+        var ldh = new Star('刘德华',18);
+        var zxy = new Star('张学友',18);
+        // 查看原型对象、对象原型的constructor构造函数
+        console.log(ldh.__proto__);
+        console.log(Star.prototype);
+        // 作用1：查看当前对象到底指向的是哪个构造（Star）函数，原型对象、对象原型的constructor构造函数都指向构造函数本身Star
+        // console.log(ldh.__proto__.constructor);
+        // console.log(Star.prototype.constructor);
+        console.log(Star.prototype.__proto__);
+        console.log(Star.prototype.__proto__ === Object.prototype)
+        console.log(Object.prototype.__proto__);
+    </script>
+</body>
+</html>

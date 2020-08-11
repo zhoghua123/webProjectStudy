@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            id:1,
+            name: '小米',
+            price: 1999
+        };
+        // 以前方式
+        // // 新增属性
+        // obj.num = 2000;
+        // // 修改
+        // obj.price = 1800;
+        // 新方式
+        // 新增
+        Object.defineProperty(obj,'num',{
+            value:1000
+        });
+        // 修改
+        Object.defineProperty(obj,'price',{
+            value:1880
+        });
+        // 修改
+        Object.defineProperty(obj,'id',{
+            // 不允许修改属性值
+            writable: false
+        });
+        // enumerable
+        Object.defineProperty(obj,'address',{
+            value:'中国河南郑州',
+            // 不允许修改属性值
+            writable: false,
+            // 不允许被遍历查看
+            enumerable:false,
+            // 不允许被删除
+            configurable:false
+        });
+
+
+        // 尽管不报错，但是还是修改不了原来的id值
+        obj.id = 2;
+        // 遍历中看不到address属性，也遍历不到num属性，因为enumerable默认为false
+        console.log(Object.keys(obj))
+        // 删除address属性
+        delete obj.address;
+        // 仍然可以看到address属性，不允许被删除
+        console.log(obj)
+
+        // 不允许再次被修改,否则报错
+        Object.defineProperty(obj,'address',{
+            value:'中国河南郑州',
+            // 不允许修改属性值
+            writable: false,
+            // 不允许被遍历查看
+            enumerable:false,
+            // 允许被删除
+            configurable:true
+        });
+
+
+    </script>
+</body>
+</html>

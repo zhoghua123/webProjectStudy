@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 父构造函数
+        function Person (name, age, sex){
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+        }
+        // 方法
+        Person.prototype.eat = function(){
+            console.log('吃饭');
+        }
+        // 子构造函数
+        function Student (name, age, sex, score){
+            // 此时父类的 this 指向子类的 this，同时调用这个函数
+            Person.call(this,name,age,sex);
+            this.score = score;
+        }
+        // 修改问题这么一修改，子构造函数的原型对象跟父构造函数的原型对象指向同一个对象
+        // 那么如果子构造函数原型对象添加了一个方法，父构造函数原型对象也会有子的方法
+        // Student.prototype = Person.prototype;
+
+        // 1. 让子类的 prototype 原型对象 = new 父类()
+        // 子构造函数原型对象指向父类构造函数实例对象
+        // 如果子类构造函数新增了一个独有方法，那这个方法是添加在了父类构造函数的示例对象中，而不会影响父类的原型对象
+        Student.prototype = new Person();
+
+        // 2. 将子类的 constructor 从新指向子类的构造函数
+        // 利用对象的形式修改了原型对象，别忘了利用constructor指回原来的原型对象
+        Student.prototype.constructor = Student;
+
+        // 子构造函数独有方法
+        Student.prototype.study = function(){
+            console.log('学习');
+        }
+        
+        var s1 = new Student('zs', 18, '男', 100);
+        console.log(s1);
+        console.log(Person.prototype);
+
+    </script>
+</body>
+</html>
