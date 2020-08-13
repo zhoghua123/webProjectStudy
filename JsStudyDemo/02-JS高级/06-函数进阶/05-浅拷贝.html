@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // var obj = {
+        //     id : 1,
+        //     name : 'rose',
+        //     msg : {
+        //         age : 18
+        //     }
+        // }
+        // var o = {};
+        // // ES6浅拷贝方法
+        // Object.assign(o,obj);
+        // console.log(o);
+        
+        // var tmp = 123; 
+        // if (true) {
+        //     // 一旦块级作用域内用let，就会锁定块级内，外部变量无效
+        //     // 报错，变量未声明
+        //     tmp = 'abc';
+        //     let tmp; 
+        // }
+
+        /*
+        var arr = [];
+        for(var i = 0; i<2;i++){
+            arr[i] = function(){
+                console.log(i);
+            }
+        }
+        // 此题的关键点在于变量i是全局的，函数执行时输出的都是全局作用域下的i值。
+        // 都输出2
+        arr[0]();
+        arr[1]();
+        */
+
+        let arr = [];
+        for(let i = 0; i<2;i++){
+            arr[i] = function(){
+                console.log(i);
+            }
+        }
+        // 此题的关键点在于每次循环都会产生一个块级作用域，每个块级作用域中的变量都是不同的，
+        // 函数执行时输出的是自己上一级（循环产生的块级作用域）作用域下的i值.
+        // 都输出0
+        arr[0]();
+        // 都输出0
+        arr[1]();
+
+    </script>
+    
+</body>
+</html>

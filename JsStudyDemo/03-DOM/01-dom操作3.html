@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <div></div>
+    <p>
+        一段文字
+        <span>123</span>
+    </p>
+    
+    <script>
+        // 1. innerText 
+        var div = document.querySelector('div');
+        // 标签直接显示，不识别字符串中的标签元素：<strong>123</strong>
+        // div.innerText = '<strong>123</strong>';
+
+        //2. innerHTML 显示结果: 加粗的 123,innerHTML可以识别字符串中的标签元素
+        div.innerHTML = '<strong>123</strong>';
+
+        //3. 这两个属性是可以读写的，获取元素中的内容
+        console.log(div.innerText);
+        console.log(div.innerHTML);
+        
+        // 4. 获取p标签内容
+        var p = document.querySelector('p');
+        // 一段文字 123
+        console.log(p.innerText);
+        /*
+        会原样输出：空格+标签
+        一段文字
+        <span>123</span>
+        */
+        console.log(p.innerHTML);
+
+    </script>
+</body>
+</html>

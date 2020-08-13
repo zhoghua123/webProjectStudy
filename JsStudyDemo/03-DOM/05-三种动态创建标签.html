@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+    
+    
+<body>
+<button>点击</button>
+<p>abc</p>
+<div class="inner"></div>
+<div class="create"></div>
+<script>
+    //三种动态创建标签的区别
+    //1. document.write()
+    // 单独写没有问题
+    // document.write('<div>123</div>');
+    var btn = document.querySelector('button');
+    // 点击按钮后，会返现p标签、button 不见了，就是页面重绘导致的
+    // 文档加载完毕，再调用document.write()，会导致页面重绘
+    btn.onclick=function() {
+        console.log(333);
+        document.write('<div>123</div>');
+    }
+    // 2. element.innerHTML
+    var inner = document.querySelector('.inner');
+    inner.innerHTML = '<a href="#">百度</a>'
+    // 创建多个
+    // 字符串拼接方式，效率低
+    // for (let i = 0; i < 100; i++) {
+    //     inner.innerHTML += '<a href="#">百度</a>';
+    // }
+    // 数组形式拼接，效率高
+    var arr = [];
+    for (let i = 0; i < 100; i++) {
+        arr.push('<a href="#">百度</a>');
+    }
+    // join，将数组转换为字符串
+    inner.innerHTML = arr.join('');
+
+    // 3. document.createElement()
+    var create = document.querySelector('.create');
+    var a = document.createElement('a');
+    create.append(a);
+    // 创建多个，效率低
+    for (let i = 0; i < 100; i++) {
+        var a = document.createElement('a');
+        create.append(a);
+    }
+</script>
+</body>
+
+</html>

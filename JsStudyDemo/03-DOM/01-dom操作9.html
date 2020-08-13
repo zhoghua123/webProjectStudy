@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+
+    </style>
+</head>
+<body>
+<div id="dome" index="1" class="name"></div>
+
+<script>
+    var div = document.querySelector('div');
+    // 1.获取元素的属性值
+    console.log(div.id);
+    // index 为自定义属性，因此不能使用element.属性获取值。undefined
+    console.log(div.index);
+    console.log(div.getAttribute('id'));
+    console.log(div.getAttribute('index'));
+    // 2. 设置元素的属性值
+    div.id = 'test';
+    div.className = 'names'
+    div.setAttribute('class','footer');
+    div.setAttribute('id','test2');
+    div.setAttribute('index','3')
+    console.log(div.className);
+    console.log(div.getAttribute('id'));
+    console.log(div.getAttribute('index'));
+
+    // 3. 删除属性
+    div.removeAttribute('index');
+
+
+</script>
+</body>
+</html>

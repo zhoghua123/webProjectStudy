@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+    
+    
+<body>
+   <ul>
+       <li>123</li>
+   </ul>
+    <script>
+        // 1. 创建元素节点
+        var li = document.createElement('li');
+        // 2. 添加节点
+        var ul = document.querySelector('ul');
+        // ul最后一个子元素后面添加
+        ul.appendChild(li);
+        // 插入到指定元素的前面
+        var li2 = document.createElement('li');
+        ul.insertBefore(li2,ul.children[0]);
+        // 3. 删除第一个节点
+        ul.removeChild(ul.children[0]);
+        // 4. 复制一个节点
+        // <li>123</li>有内容123
+        var li3 = ul.children[0].cloneNode(true);
+        // <li></li>没有内容123
+        // var li3 = ul.children[0].cloneNode();
+        ul.insertBefore(li3,ul.children[0]);
+    </script>
+</body>
+
+</html>

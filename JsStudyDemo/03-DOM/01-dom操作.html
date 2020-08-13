@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="time">2020-0812</div>
+    <ul>
+        <li>哈哈哈哈</li>
+        <li>哈哈哈哈</li>
+        <li>哈哈哈哈</li>
+        <li>哈哈哈哈</li>
+        <li>哈哈哈哈</li>
+    </ul>
+    <ul id="nav">
+        <li>呵呵</li>
+        <li>呵呵</li>
+        <li>呵呵</li>
+        <li>呵呵</li>
+        <li>呵呵</li>
+    </ul>
+
+    <div class="test">hhh</div>
+    <div class="test">hhh</div>
+
+
+    <script>
+        // 1. 通过id获取标签
+        var timer = document.getElementById('time')
+        console.log(timer);
+        //Object
+        console.log(typeof timer);
+        //    打印元素对象，可以查看属性
+        console.dir(timer)
+
+        // 2. 根据标签名获取标签
+        // lis元素对象的集合，以伪数组的形式存储
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        for (let i = 0; i < lis.length; i++) {
+           console.log(lis[i]);
+        }
+        //2.2获取某个元素内部的标签
+        var nav =document.getElementById('nav');
+        //获取某个元素内部的标签
+        var navlis = nav.getElementsByTagName('li');
+        console.log(navlis);
+    
+        //3. 通过 HTML5 新增的方法获取
+        //.1根据类名获取
+        var tests = document.getElementsByClassName('test')
+        console.log(tests);
+        //3.2 根据选择器获取
+        var test = document.querySelector('.test');
+        var iddiv = document.querySelector('#time')
+        console.log(test);
+        console.log(iddiv);
+        // 3.3返回选择器所有的内容
+        var testss = document.querySelectorAll('.test') 
+        console.log(testss);
+
+    </script>
+</body>
+</html>

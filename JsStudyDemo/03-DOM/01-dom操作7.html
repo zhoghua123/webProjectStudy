@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .orgin {
+            width: 200px;
+            height: 200px;
+            background-color: #ff0;
+        }
+        /* 要修改的样式，样式很多 */
+        .change {
+            background-color: #0f0;
+            color: #fff;
+            font-size: 25px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="orgin">234</div>
+<script>
+
+    var div = document.querySelector('div');
+    div.onclick = function () {
+        // js添加的样式会添加到行内样式
+        // 修改背景色，css属性采用驼峰标识
+        // this.style.backgroundColor = '#0f0';
+        // // 修改尺寸
+        // this.style.width = '300px';
+
+        // 通过className,修改当前元素的类名
+        this.className = 'change';
+        // 保留原先的属性，再添加上新的属性
+        this.className = 'orgin change'
+    }
+</script>
+</body>
+</html>
