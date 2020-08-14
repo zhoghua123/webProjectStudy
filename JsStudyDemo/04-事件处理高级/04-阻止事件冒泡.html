@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            padding-top: 30px;
+        }
+        .son {
+            width: 50px;
+            height: 50px;
+            background-color: #0f0;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+    <script>
+    
+        var son = document.querySelector('.son');
+        son.addEventListener('click',function(e){
+            alert('son');
+            // 阻止冒泡
+            e.stopPropagation();
+        });
+        var father = document.querySelector('.father');
+        father.addEventListener('click',function(){
+            // 不在执行
+            alert('father');
+        });
+
+
+
+    </script>
+</body>
+</html>

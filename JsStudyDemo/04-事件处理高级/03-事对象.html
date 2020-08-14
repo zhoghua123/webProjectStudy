@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<div>123</div>
+<ul>
+    <li>234</li>
+    <li>234</li>
+    <li>234</li>
+</ul>
+<script>
+    var div = document.querySelector('div');
+    div.onclick = function(event) {
+        // event就是一个事件对象，
+        // 事件对象只有有了事件才会存在，系统自动创建传递，不需要手动传递
+        // 事件对象可以自定义名字，比如e
+        console.log(event.target);
+        console.log(this);
+    }
+    var ul = document.querySelector('ul');
+    ul.onclick = function(e) {
+        // 返回ul元素，事件的绑定者=函数的调用者
+        console.log(this);
+        // 返回li元素，事件的触发者
+        console.log(e.target);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+            padding-top: 30px;
+        }
+        .son {
+            width: 50px;
+            height: 50px;
+            background-color: #0f0;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+    <script>
+    
+        /*1. 监听事件的捕获阶段，document->html->body->father->son*/
+        // addEventListener第三个参数为true
+        // var son = document.querySelector('.son');
+        // true,监听捕获阶段
+        // son.addEventListener('click',function(){
+        //     alert('son');
+        // },true);
+        // var father = document.querySelector('.father');
+        // true,监听捕获阶段
+        // father.addEventListener('click',function(){
+        //     alert('father');
+        // },true);
+        // 效果，点击son之后，father先执行函数，之后son再执行函数
+
+        /*2. 监听事件的冒泡阶段，son->father->body->html->document*/
+        // addEventListener第三个参数为false或者省略
+        var son = document.querySelector('.son');
+        // true,监听捕获阶段
+        son.addEventListener('click',function(){
+            alert('son');
+        });
+        var father = document.querySelector('.father');
+        // true,监听捕获阶段
+        father.addEventListener('click',function(){
+            alert('father');
+        });
+        // 效果，点击son之后，son先执行函数，之后father再执行函数
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>点击</button>
+    <script>
+        var btn = document.querySelector('button');
+        // 在浏览器中跳转页面效果
+        btn.onclick = function(){
+            if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android| Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS |Symbian|Windows Phone)/i))) {
+                window.location.href = "https://www.baidu.com"; //手机 
+                console.log('手机');
+            } else {
+                // window.location.href = ""; //电脑 
+                console.log('电脑');
+            }
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <!-- 点击s键，聚焦搜索框 -->
+    <input type="text">
+    <script>
+        // document.onkeyup = function() {
+        //     console.log('按键被松开');
+        // }
+        // document.addEventListener('keydown',function(){
+        //     console.log('按键被按下');
+        // })
+        // document.addEventListener('keypress',function(e){
+        //     console.log('按键被按下');
+        //     // 按下a键盘，输出97
+        //     console.log(e.keyCode);
+        // })
+        var input = document.querySelector('input');
+        // // 键盘松开再聚焦，否则其他方式聚焦后会在input输入内容
+        // document.onkeyup = function() {
+        //     input.focus();
+        // }
+        // 监听input的键盘输入
+        input.onkeyup = function (){
+            // 获取输入内容
+            console.log(this.value);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .father {
+            width: 100px;
+            height: 100px;
+            background-color: #ff0;
+            margin: 100px;
+            /* position: relative; */
+        }
+        .son {
+            width: 50px;
+            height: 50px;
+            background-color: #0f0;
+            margin-left: 25px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        var father = document.querySelector('.father');
+        var son = document.querySelector('.son');
+        // 距离父盒子顶部,100
+        console.log(father.offsetTop);
+        // 距离父盒子左边,100
+        console.log(father.offsetLeft);
+        // 父类不是定位元素，所以参照为body
+        // 125
+        console.log(son.offsetLeft);
+        // 如果给father元素添加position: relative;属性，则参照物就是father
+        // 100
+        // console.log(son.offsetLeft);
+        // 100
+        console.log(son.offsetTop);
+
+        console.log(son.offsetWidth);
+    </script>
+</body>
+</html>

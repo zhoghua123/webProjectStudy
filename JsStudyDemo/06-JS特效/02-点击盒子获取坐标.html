@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+            background-color: #ff0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 获取鼠标点击在盒子中的坐标 -->
+    <div class="box"></div>
+    <script>
+        var box = document.querySelector('.box');
+        box.onclick = function(e){
+            // 鼠标点击的位置距离文档的坐标
+            console.log(e.pageX,e.pageY);
+            // 盒子距离body的距离
+            console.log(this.offsetTop,this.offsetLeft);
+            // 计算出点击点举例盒子的坐标
+            var y = e.pageY - this.offsetTop;
+            var x = e.pageX - this.offsetLeft;
+            console.log(x,y);
+        }
+    </script>
+</body>
+</html>

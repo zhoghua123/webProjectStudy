@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn1">监听事件</button>
+    <button class="btn2">attach监听</button>
+    <button class="btn3">事件删除</button>
+    <script>
+        // 1. addEventListener事件监听
+        var btn = document.querySelector('.btn1');
+        // 事件类型是字符串，不带on
+        btn.addEventListener('click',function(){
+            alert(22);
+        });
+
+        // 同一个对象可以添加多个事件
+        btn.addEventListener('click',function(){
+            alert(33);
+        });
+        // 2. attachEvent,只支持IE浏览器，且IE<9
+        var btn2 = document.querySelector('.btn2');
+        // btn2.attachEvent('onclick',function(){
+        //     alert('attachEvent');
+        // });
+
+        // 3. 事件删除
+        var btn3 = document.querySelector('.btn3');
+        btn3.addEventListener('click',fn);
+        function fn() {
+            alert(666);
+            // 事件删除
+            // btn3.removeEventListener('click',fn);
+            this.removeEventListener('click',fn);
+        }
+        
+
+    </script>
+</body>
+</html>

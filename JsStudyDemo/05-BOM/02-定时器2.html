@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 定时器2s触发
+        var timer1 = setTimeout(function(){
+            console.log(111);
+        }, 2000);
+
+        // 清除定时器
+        clearTimeout(timer1);
+        // 每隔2秒执行一次
+        var time2 = setInterval(function(){
+            console.log(111);
+        },2000);
+    </script>
+</body>
+</html>

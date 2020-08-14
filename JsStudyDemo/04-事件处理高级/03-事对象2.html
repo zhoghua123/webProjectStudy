@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<a href="http://www.baidu.com">百度</a>
+<script>
+    var a = document.querySelector('a');
+    // 阻止元素的默认行为，阻止a标签默认的点击跳转
+    // a.addEventListener('click',function(e){
+    //     // 阻止点击a标签跳转，dom标准写法
+    //     e.preventDefault();
+    // });
+    // 传统写法
+    a.onclick = function(e){
+        // IE>8
+        // e.preventDefault();
+        // 低版本浏览器IE6-8
+        // e.returnValue;
+        // 可以return false 也能阻止默认的元素行为，没有兼容性问题
+        return false;
+    }
+</script>
+</body>
+</html>
