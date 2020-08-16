@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 10px solid red;
+            padding: 10px;
+            /* 显示滚动条 */
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>很多内容 很多内容 很多内容 很多内容 很多内容 很多内容 很多内容 很多内容 很多内容 很多内容</div>
+    <script>
+        var div = document.querySelector('div');
+        // 176
+        console.log(div.scrollHeight);
+        // 100
+        console.log(div.scrollWidth);
+        // 监听滚动条事件
+        div.onscroll = function() {
+            console.log(div.scrollTop);
+        }
+    </script>
+</body>
+
+</html>

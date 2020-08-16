@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button class="set">存储数据</button>
+    <button class="get">获取数据</button>
+    <button class="remove">删除数据</button>
+    <button class="del">清空所有数据数据</button>
+    <script>
+        var input = document.querySelector('input');
+        var set = document.querySelector('.set');
+        var get = document.querySelector('.get');
+        var remove = document.querySelector('.remove');
+        var del = document.querySelector('.del');
+        // 1. 关闭当前页面，存储数据自动消失
+        // 存储数据
+        set.addEventListener('click',function(){
+            var value = input.value;
+            // 多次存储同样的key，会覆盖
+            sessionStorage.setItem('name',value);
+        });
+        get.addEventListener('click',function(){{
+            // 获取存储内容
+            console.log(sessionStorage.getItem('name'));
+        }});
+        remove.addEventListener('click',function(){
+            // 删除数据
+            sessionStorage.removeItem('name');
+            // 获取存储内容
+            console.log(sessionStorage.getItem('name'));
+        });
+        // 全部清空数据
+        del.addEventListener('click',function(){{
+            // 清空数据
+            sessionStorage.clear();
+            // 获取存储内容
+            console.log(sessionStorage.getItem('name'));
+        }});    
+    </script>
+</body>
+</html>

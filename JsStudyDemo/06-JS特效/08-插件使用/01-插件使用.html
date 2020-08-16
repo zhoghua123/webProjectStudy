@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 进入第三方插件 -->
+    <script type='application/javascript' src='/path/to/fastclick.js'></script>
+</head>
+<body>
+    <div></div>
+    <script>
+        // dom元素加载完毕（DOMContentLoaded）执行这个代码
+        // 当前dom元素中所有的元素都去掉300ms延时问题了
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        }
+        var div = document.querySelector('div');
+        div.addEventListener('click',function() {
+            alert(11);
+        });
+    </script>
+    
+</body>
+</html>

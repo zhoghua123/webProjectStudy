@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #0f0;
+        }
+        .on{
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="one two"></div>
+    <button>切换类名（开关灯）</button>
+    <script>
+        var div = document.querySelector('div');
+        var button = document.querySelector('button');
+        // 返回元素的类名[one,two]
+        console.log((div.classList));
+        // 添加类名
+        div.classList.add('three');
+        // 返回元素的类名[one,two,three]
+        console.log((div.classList));
+        // 移除类名
+        div.classList.remove('one');
+        // 返回元素的类名[two,three]
+        console.log((div.classList));
+        // 切换类名
+        button.onclick = function() {
+            // 如果div没有two类，就给他加上，如果有，就删除，来回切换
+            div.classList.toggle('two');
+            // [two,three]/[three],之间切换
+            console.log((div.classList));
+            // 开关灯切换
+            document.body.classList.toggle('on');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            /* 盒子必须定位，才能使用动画 */
+            position: absolute;
+            background-color: #0f0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 1. 获取盒子当前位置
+        var div = document.querySelector('div');
+        animate(div,300);
+
+        // 给obj添加一个timer，obj专属定时器
+        function animate(obj,target) {
+            // 1. 获取盒子当前位置
+            // var div = document.querySelector('div');
+            // 2. 让盒子在当前位置加上1个移动距离
+            // 3. 利用定时器不断重复这个操作
+            // 每次执行前先需取消已存在的定时器
+            clearInterval(obj.timer);
+            obj.timer = setInterval(() => {
+                // 步长
+                // 减速移动
+                // (目标值 - 现在的位置 ) / 10 做为每次移动的距离 步长
+                // 把步长改为整数，不要小数,小数直接取大于整数
+                var step = Math.ceil((target - obj.offsetLeft)/10);
+                if(obj.offsetLeft = target){
+                    clearInterval(obj.timer);
+                }
+                obj.style.left = obj.offsetLeft +step + 'px';
+            }, 15);
+        }
+    </script>
+</body>
+
+</html>
