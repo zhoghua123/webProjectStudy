@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入jquery -->
+    <script src="jquery/jquery.min.js" type='application/javascript' ></script>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <script>
+        $(function(){
+            // 1. 所有的div都会修改同一个颜色
+            // $('div').css('color','#ff0');
+            // 2. 每个div设置不同的颜色
+            var arr = ['red','blue','yellow'];
+            $('div').each(function(index,domEle){
+                // console.log(index);
+                // $(domEle).css('color',arr[index]);
+            })
+
+            // 3. $.each
+            // 遍历伪数组
+            $.each($('div'),function(index,element){
+                // console.log(index);
+                $(element).css('color',arr[index]);
+            })
+            // 遍历数组
+            $.each(arr,function(i,ele){
+
+            })
+            // 遍历对象
+            $.each({name:'rose',age:10},function(i,ele){
+                console.log(i);//属性名
+                console.log(ele);//属性值
+            })
+        })
+    </script>
+</body>
+</html>

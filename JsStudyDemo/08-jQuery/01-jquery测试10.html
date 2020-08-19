@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入jquery -->
+    <script src="jquery/jquery.min.js" type='application/javascript' ></script>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div>222</div>
+
+    <script>
+        $('div').on('click',function(){
+            alert(11);
+        })
+        // 自动触发事件
+        // 方式1：
+        $('div').click();
+        // 方式2：
+        $('div').trigger('click');
+        // 方式3：不会触发元素的默认行为
+        $('div').triggerHandler('click');
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入jquery -->
+    <script src="jquery/jquery.min.js" type='application/javascript' ></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <video src="mov.mp4"></video>
+    <script>
+        //1. dom对象
+        var div = document.querySelector('div');
+        // 2. jquery对象
+        $('div');  //jquery对象,是一个数组
+        // 3. dom对象使用原生js方法，jquery对象使用jquery方法
+        // 隐藏
+        div.style.display = 'none';
+        $('div').hide();
+        // 4. dom转化为jquery对象
+        var video = document.querySelector('video');
+        // jquery对象
+        $(video);
+        // jquery转化为dom
+        // video.play();
+        $('video')[0].play();
+        $('video').get(0).play();
+
+    </script>
+</body>
+</html>

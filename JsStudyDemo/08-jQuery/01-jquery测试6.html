@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入jquery -->
+    <script src="jquery/jquery.min.js" type='application/javascript' ></script>
+    <style>
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.baidu.com">百度</a>
+    <span data-index="333">123</span>
+    <script>
+        $(function(){
+            // 1. 元素固有属性
+            // 获取属性
+            console.log($('a').prop('href'));
+            // 设置属性
+            $('a').prop('title','baiduu')
+
+            // 数据缓存data(),这个里面的数据是存放在元素的内存中
+            // 存储一个name到span标签中，就把span当做一个变量名
+            $('span').data('name','rose');
+            // 获取存储的数据
+            console.log($('span').data('name'));
+            // 获取H5属性,注意：不需要加 data-
+            console.log($('span').data('index'));
+
+        })
+    </script>
+</body>
+</html>
