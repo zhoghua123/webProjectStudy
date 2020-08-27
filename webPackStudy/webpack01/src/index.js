@@ -3,6 +3,6 @@ import $ from 'jquery'
 
 // 各行变色
 $(function(){
-    $('li:odd').css('backgroundColor','pink');
+    $('li:odd').css('backgroundColor','red');
     $('li:even').css('backgroundColor','lightblue');
 })
