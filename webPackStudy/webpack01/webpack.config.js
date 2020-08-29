@@ -18,7 +18,18 @@ module.exports = {
         // 输出文件的名称
         filename: 'bundle.js'
     },
-    plugins:[htmlPlugin]// plugins 数组是 webpack 打包期间会用到的一些插件列表 
-    
-
+    plugins:[htmlPlugin],// plugins 数组是 webpack 打包期间会用到的一些插件列表 
+    module: {
+        rules:[
+            // 处理css文件
+            {test: /\.css$/, use: ['style-loader','css-loader','postcss-loader']},
+            // 处理less文件
+            {test: /\.less$/, use: ['style-loader','css-loader','less-loader']},
+            // 处理scss文件
+            // {test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader']}
+            {test: /\.jpg|png|gif|bmp|ttf|eot|svg|woff|woff2$/, use:'url-loader?limit=169'},
+            // exclude 为排除项，表示 babel-loader 不需要处理 node_modules 中的 js 文件
+            {test: /\.js$/, use: 'babel-loader', exclude: /node_modules/}
+        ]
+    }
 }
