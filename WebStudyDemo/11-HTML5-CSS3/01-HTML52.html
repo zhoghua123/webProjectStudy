@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5新增语义标签</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #ff0;
+            /* 告诉系统哪些属性要发生过渡 */
+            /* transition-property: width, height, margin-left, background-color; */
+            /* 监控所有属性的改变 */
+            /* transition-property: all; */
+            /* 设置过渡的时间 */
+            /* transition-duration: 1s, 1s, 1s, 1s; */
+            /* 设置所有属性过渡的时间 */
+            /* transition-duration: 1s; */
+            /* 简写 */
+            transition: all 1s;
+            /* 过渡延迟多少s */
+            transition-delay: 2s;
+        }
+        
+        .box:hover {
+            width: 300px;
+            height: 300px;
+            margin-left: 30px;
+            background-color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
