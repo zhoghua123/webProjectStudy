@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/* 定版心 */
+.w {
+    width: 1200px;
+    margin: auto;
+}
+
+/* header部分 */
+
+.header {
+    height: 42px;
+    margin: 30px auto;
+    background-color: #0f0;
+}
