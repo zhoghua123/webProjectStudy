@@ -103,3 +103,46 @@
 .hotwords a {
     margin: 0 10px;
 }
+
+.shopcar {
+    position: absolute;
+    top: 25px;
+    right: 64px;
+    width: 138px;
+    height: 34px;
+    border:  1px solid #dfdfdf;
+    background-color: #f7f7f7;
+    line-height: 34px;
+    text-align: center;
+}
+
+.shopcar .car {
+    font-family: 'icomoon';
+    font-size: 14px;
+    color: #c81623;
+}
+
+.shopcar .arrow {
+    font-family: 'icomoon';
+    font-size: 14px;
+    margin-left: 5px;
+    vertical-align: middle;
+    color: #c81623;
+}
+.shopcar .count{
+    position: absolute;
+    top: -5px;
+    left: 100px;
+    /* right: 18px; */
+    background-color: #c81623;
+    height: 14px;
+    padding: 2px 5px;
+    line-height: 14px;
+    color: #fff;
+    border-radius: 7px 7px 7px 0;
+}
+
+.nav {
+    height: 45px;
+    border-bottom: 2px solid #b1191a;
+}
