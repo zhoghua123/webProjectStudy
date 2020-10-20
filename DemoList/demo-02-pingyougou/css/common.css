@@ -47,7 +47,6 @@
 .header {
     position: relative;
     height: 105px;
-    background-color: #ff0;
 }
 .header .logo {
     position: absolute;
@@ -145,4 +144,145 @@
 .nav {
     height: 45px;
     border-bottom: 2px solid #b1191a;
+}
+
+.dropdown {
+    width: 200px;
+    height: 45px;
+    background-color: #0ff;
+}
+.dropdown .dt {
+    height: 100%;
+    background-color: #b1191a;
+    font-size: 16px;
+    color: #fff;
+    line-height: 45px;
+    text-align: center;
+}
+
+.dropdown .dd {
+    height: 465px;
+    background-color: #c81623;
+    margin-top: 2px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.dd li {
+   height: 31px;
+   margin-left: 1px;
+   line-height: 31px; 
+   padding: 0 10px;
+}
+
+.dd li:hover {
+    background-color: #fff;
+}
+.dd li a {
+    color: #fff;
+    font-size: 14px;
+}
+.dd li:hover a {
+    color: #c81623;
+}
+
+.dd li i {
+    float: right;
+
+    font-family: 'icomoon';
+    font-size: 18px;
+    color: #fff;
+}
+.navitems {
+    margin-left: 10px;
+}
+.navitems li {
+    float: left;
+    color: #333;
+}
+.navitems li a {
+    display: block;
+    height: 45px;
+    padding: 0 25px;
+    line-height: 45px;
+    font-size: 16px;
+}
+
+.footer {
+    height: 386px;
+    background-color: #f5f5f5;
+    padding-top: 30px;
+}
+
+.mode-service {
+    height: 79px;
+    border-bottom: 1px solid #ccc;
+}
+.mode-service li {
+    float: left;
+    width: 240px;
+    height: 79px;
+}
+.mode-service-icon {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background: url(../img/icons.png) no-repeat;
+    margin-left: 35px;
+}
+
+.mode-service-zheng {
+    background-position:  -253px -3px;
+}
+.mode-service-title {
+    float: left;
+    margin-left: 5px;
+}
+
+.mode-service-title h5 {
+    margin: 5px 0;;
+}
+
+.mode-service-kuai {
+    background-position:  -255px -53px;
+}
+.mode-service-bao {
+    background-position:  -257px -105px;
+}
+
+.mode-help {
+    width: 100%;
+    height: 187px;
+    border-bottom: 1px solid #ccc;
+}
+.mode-help-item {
+    float: left;
+    width: 150px;
+    padding: 20px 0 0 50px;
+}
+
+.mode-help-item dt {
+    height: 25px;
+    font-size: 16px;
+
+}
+
+.mode-help-item dd {
+    height: 22px;
+}
+
+.mode-help-app dt, 
+.mode-help-app p {
+ padding-left: 15px;
+}
+
+.mode-help-app img {
+    margin: 7px 0; 
+}
+
+.mode-copyright {
+    text-align: center;
+}
+.mode-copyright-links {
+    margin: 20px 0 15px 0;
 }
