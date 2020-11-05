@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../common.css">
+</head>
+<body>
+    <button class="btn"> 点击发送请求</button>
+
+    <a href="../../index.html" class="home">Home</a>
+</body>
+<script type="text/javascript">
+    var btn = document.getElementsByClassName('btn')[0];
+    console.log('----',btn);
+    btn.onclick = function(){
+         //1.创建 Ajax 对象
+        var xhr = new XMLHttpRequest();
+        //2. 告诉 Ajax 请求地址以及请求方式
+        xhr.open('post', 'http://127.0.0.1:3000/ajatest');
+        //发送请求
+        xhr.send('name=zhangsan&age=20');
+        //3. 获取服务器端给与客户端的响应数据
+        xhr.onload = function () { 
+            console.log(xhr.responseText);
+        }
+    }
+</script>
+</html>
