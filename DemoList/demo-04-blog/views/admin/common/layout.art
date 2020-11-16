@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="/admin/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/admin/css/base.css">
+    <!-- 挖坑填充 -->
+    {{block 'link'}} {{/block}}
+</head>
+
+<body>
+    <!-- 主内容坑 -->
+    {{block 'main'}} {{/block}}
+    <script src="/admin/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/admin/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/admin/js/common.js"></script>
+    <!-- js坑 -->
+    {{block 'script'}} {{/block}}
+</body>
+
+</html>
