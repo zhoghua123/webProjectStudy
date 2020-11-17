@@ -62,3 +62,5 @@
     3. windows-build-tools (windows下才需要安装)
         1. `npm install --global --production windows-build-tools`
     4. 安装bcrypt: npm install bcrypt
+
+## cookie与session

@@ -15,7 +15,9 @@ admin.get('/login',(req,res)=>{
 
 // 创建用户列表路由
 admin.get('/user',(req,res)=>{
-    res.render('admin/user');
+    res.render('admin/user',{
+        // msg:req.session.username
+    });
 });
 admin.post('/login',async (req,res)=>{
     // 接收请求参数
@@ -34,8 +36,23 @@ admin.post('/login',async (req,res)=>{
         let isvalid = await bcrypt.compare(password,user.password);
         if(isvalid){
             // 登录成功，将用户名存储在请求对象中
-            req.username = user.username;
-            res.send('登录成功!');
+            // 向session对象中存储数据，session会自动生成一个sessionid，然后自动将sessionid存储到客户端的cookie中
+            req.session.username = user.username;
+
+            // 将数据全局存储
+            // req.app 就是app.js中创建的app对象
+            req.app.locals.userinfo = user;
+
+            // res.send('登录成功!');
+            // express框架的 重定向，跳转到用户列表页面
+            res.redirect('/admin/user');
+
+            // 原生node的重定向
+            // res.writeHead(301, {
+            //     Location: '/admin/user'
+            // });
+            // res.end();
+            
         }else{
             res.status(400).render('admin/error',{msg:'邮件地址或者密码错误'});
         }

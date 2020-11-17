@@ -9,6 +9,8 @@ var bodyPaser = require('body-parser');
 const home = require('./route/home');
 const admin = require('./route/admin');
 
+const session = require('express-session');
+
 
 // 创建网站服务器
 const app = express();
@@ -20,6 +22,9 @@ require('./model/connect')
 
 // 处理post请求参数
 app.use(bodyPaser.urlencoded({extended:false}));
+
+// 配置session
+app.use(session({secret:'secret key'}))
 
 // 给express配置模板
 // 告诉express框架,模板的目录
