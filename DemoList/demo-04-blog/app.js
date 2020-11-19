@@ -10,6 +10,7 @@ const home = require('./route/home');
 const admin = require('./route/admin');
 
 const session = require('express-session');
+const { nextTick } = require('process');
 
 
 // 创建网站服务器
@@ -38,9 +39,21 @@ app.engine('art',require('express-art-template'));
 // 开放静态资源文件:(image、css、js文件，html文件不是静态文件，因为需要填充动态数据)
 app.use(express.static(path.join(__dirname,'public')));
 
+// 拦截所有非登录页面，用于判断当前用户是否登录，如果登录才放开拦截
+app.use('/admin',require('./middleware/loginGuard'));
+
 // 根据请求路径（一级路由）匹配相应的二级路由
 app.use('/home',home);
 app.use('/admin',admin);
+
+// 错误处理中间件，统一处理错误信息
+app.use((err,req,res,next)=>{
+    // 字符串转为对象
+    const result = JSON.parse(err);
+    // `${}` ：es6字符串拼接
+    return res.redirect(`${result.path}?message=${result.message}`)
+});
+
 
 // 监听服务端口
 app.listen(80);

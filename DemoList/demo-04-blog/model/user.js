@@ -3,6 +3,7 @@
 const mongoose = require('mongoose');
 // 1. 进入加密模块
 const bcrypt = require('bcrypt');
+const Joi = require('joi')
 
 // 创建用户集合规则，相当于一个类
 const userSchema = new mongoose.Schema({
@@ -60,12 +61,27 @@ async function createUser (){
         role: 'admin',
         state: 0
     })
-
  }
 
 // createUser();
 
+// 验证用户信息
+const validateUser = user=>{
+    // 定义规则
+    const schema = {
+        username: Joi.string().min(2).max(12).required().error(new Error('username没有通过验证')),
+        email: Joi.string().email().error(new Error('邮箱格式不符合要求')),
+        password: Joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).required().error(new Error('密码格式不符合要求')),
+        role: Joi.string().valid('normal','admin').required().error(new Error('角色格式不符合要求')),
+        state: Joi.number().valid(0,1).required().error(new Error('状态值非法'))
+    }
+     // 实施验证
+    return Joi.validate(user,schema);
+}
+
 // 将用户集合作为模块成员导出
 module.exports = {
-    User: User
+    // User: User
+    User,
+    validateUser
 }
