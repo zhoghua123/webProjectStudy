@@ -16,8 +16,11 @@ admin.get('/logout',require('./admin/logout'));
 admin.get('/user-edit',require('./admin/user-edit'));
 // 实现添加用户功能
 admin.post('/user-edit',require('./admin/user-edit-fn'));
-
+// 修改用户信息
 admin.post('/user-modify',require('./admin/user-modify'));
+
+// 删除用户路由
+admin.get('/delete',require('./admin/user-delete'));
 
 // 将路由对象作为模块成员进行导出
 module.exports = admin;
