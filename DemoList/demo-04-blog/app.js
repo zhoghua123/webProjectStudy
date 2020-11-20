@@ -25,7 +25,13 @@ require('./model/connect')
 app.use(bodyPaser.urlencoded({extended:false}));
 
 // 配置session
-app.use(session({secret:'secret key'}))
+app.use(session({
+    secret:'secret key',
+    saveUninitialized:false, //默认不初始化cookie
+    cookie:{
+        maxAge: 24 * 60 * 60 * 1000 //设置cookie失效时间为1天
+    }
+}))
 
 // 给express配置模板
 // 告诉express框架,模板的目录
