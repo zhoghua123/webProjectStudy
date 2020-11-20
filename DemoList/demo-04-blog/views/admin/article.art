@@ -38,7 +38,7 @@
                         <td>5b9a716cb2d2bf17706bcc0a</td>
                         <td>JavaScript基础一：基本介绍</td>
                         <td>2020-12-23</td>
-                        <td>黑马讲师</td>
+                        <td>HM讲师</td>
                         <td>
                             <a href="article-edit.html" class="glyphicon glyphicon-edit"></a>
                             <i class="glyphicon glyphicon-remove" data-toggle="modal" data-target=".confirm-modal"></i>
@@ -48,7 +48,7 @@
                         <td>5b9a716cb2d2bf17706bcc0a</td>
                         <td>JavaScript基础二：代码书写位置</td>
                         <td>2020-12-24</td>
-                        <td>黑马讲师</td>
+                        <td>HM讲师</td>
                         <td>
                             <a href="article-edit.html" class="glyphicon glyphicon-edit"></a>
                             <i class="glyphicon glyphicon-remove" data-toggle="modal" data-target=".confirm-modal"></i>
@@ -58,7 +58,7 @@
                         <td>5b9a716cb2d2bf17706bcc0a</td>
                         <td>JavaScript基础三：代码注释</td>
                         <td>2020-12-25</td>
-                        <td>黑马讲师</td>
+                        <td>HM讲师</td>
                         <td>
                             <a href="article-edit.html" class="glyphicon glyphicon-edit"></a>
                             <i class="glyphicon glyphicon-remove" data-toggle="modal" data-target=".confirm-modal"></i>

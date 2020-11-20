@@ -51,7 +51,14 @@ app.use((err,req,res,next)=>{
     // 字符串转为对象
     const result = JSON.parse(err);
     // `${}` ：es6字符串拼接
-    return res.redirect(`${result.path}?message=${result.message}`)
+    let params = [];
+    for(let attr in result){
+        if(attr != 'path'){
+            params.push(attr + '=' + result[attr]);
+        }
+    }
+    console.log('');
+    return res.redirect(`${result.path}?${params.join('&')}`);
 });
 
 

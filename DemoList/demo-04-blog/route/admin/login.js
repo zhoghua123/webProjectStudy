@@ -42,7 +42,7 @@ module.exports = async (req,res)=>{
     }else{
         res.status(400).render('admin/error',{msg:'邮件地址或者密码错误'});
     }
-    res.send(req.body);
+    // res.send(req.body);
 }
 
 // module.exports = login;
