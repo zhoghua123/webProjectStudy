@@ -1,6 +1,8 @@
 const user = require('../../model/user');
 const { User } = require('../../model/user')
 module.exports = async (req,res)=>{
+    // 记录当前选中的状态：用户列表页面
+    req.app.locals.current = 'user';
     // 分页展示数据
 
     // 接收客户端传递过来的当前页参数,默认显示第1页
