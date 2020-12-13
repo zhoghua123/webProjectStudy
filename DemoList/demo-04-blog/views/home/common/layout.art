@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link rel="stylesheet" href="/home/css/base.css">
+    <!-- 挖坑填充 -->
+    {{block 'link'}} {{/block}}
+</head>
+<body>
+     <!-- 主内容坑 -->
+    {{block 'main'}} {{/block}}
+</body>
+</html>

@@ -1,7 +1,6 @@
+
 // 创建文章集合
 // 1. 引入mongoose
-
-
 const mongoose = require('mongoose');
 
 // 2. 创建规则
@@ -14,13 +13,12 @@ const articleSchema = new mongoose.Schema({
     },
     author: {
         type: mongoose.Schema.Types.ObjectId,//数据库独有的数据类型
-        ref: 'User', //作者的类型为User集合类型
-        required: [true,'请传递作者']
+		ref: 'User', //作者的类型为User集合类型
+		required: [true, '请传递作者']
     },
     publishDate: {
         type: Date,
         default: Date.now
-
     },
     cover : { //封面
         type : String,
@@ -32,9 +30,9 @@ const articleSchema = new mongoose.Schema({
 });
 
 // 3. 根据规则创建集合
-const Article = mongoose.model('Article',articleSchema);
+const Article = mongoose.model('Article', articleSchema);
 
 // 4. 导出集合对象
 module.exports = {
-    Article
+	Article
 }

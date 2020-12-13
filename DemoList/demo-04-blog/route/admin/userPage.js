@@ -1,4 +1,3 @@
-const user = require('../../model/user');
 const { User } = require('../../model/user')
 module.exports = async (req,res)=>{
     // 记录当前选中的状态：用户列表页面
