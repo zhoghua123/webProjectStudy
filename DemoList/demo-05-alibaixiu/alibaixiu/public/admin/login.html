@@ -52,8 +52,15 @@
           password: password
         },
         success: function (response) {
-          // 登录成功 跳转到数据管理的首页面
-          location.href = 'index.html';
+          // 对用户的角色进行判断
+          // 如果是管理员，则跳转到管理页面
+          if(response.role =='admin'){
+            location.href = '/admin/index.html';
+          }else{ // 如果是普通用户则跳转到网站首页面
+            location.href = '/index.html';
+          }
+         
+         
         },
         error: function () {
           // 登录失败

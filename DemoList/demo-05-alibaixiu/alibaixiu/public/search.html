@@ -44,8 +44,8 @@
     </div>
     <div class="content">
       <div class="panel new">
-        <h3 id="categoryTitle">会生活</h3>
-        <div id="listBox"></div>
+        <h3 id="categoryTitle">搜索结果</h3>
+        <div id="searchBox"></div>
       </div>
     </div>
     <div class="footer">
@@ -57,7 +57,7 @@
   <!-- 引入模板组件 -->
   <script src="assets/vendors/art-template/template-web.js"></script>
    <!-- 文章列表模板 -->
-   <script type="text/html" id="listTpl">
+   <script type="text/html" id="searchTpl">
     {{each data}}
     <div class="entry">
       <div class="head">
@@ -85,7 +85,7 @@
     {{/each}}
   </script>
   <script src="assets/js/public.js"></script>
-  <script src="assets/js/list.js"></script>
+  <script src="assets/js/search.js"></script>
  
 
 </body>

@@ -38,7 +38,6 @@ $('#modifyBox').on('change', '#avatar', function () {
 			console.log(response)
 			// 实现头像预览功能
 			$('#preview').attr('src', response[0].avatar);
-			// 隐藏域用于提交给服务器的
 			$('#hiddenAvatar').val(response[0].avatar)
 		}
 	})

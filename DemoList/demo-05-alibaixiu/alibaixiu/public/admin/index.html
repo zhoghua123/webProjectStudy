@@ -1,12 +1,7 @@
-<!--1. 登录拦截-->
-<!-- 根据当前登录状态来判断当前页面是否加载，已登录继续加载，未登录直接跳转到登录页面 -->
-<!-- 加载服务端提供的接口地址：获取用户登录状态 ,返回结果isLogin变量-->
 <script src="/login/status"></script>
 <script>
   if (!isLogin) location.href = 'login.html';
 </script>
-
-<!--2. 登录拦截-->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -42,9 +37,9 @@
               <h3 class="panel-title">站点内容统计：</h3>
             </div>
             <ul class="list-group">
-              <li class="list-group-item"><strong>10</strong>篇文章（<strong>2</strong>篇草稿）</li>
-              <li class="list-group-item"><strong>6</strong>个分类</li>
-              <li class="list-group-item"><strong>5</strong>条评论（<strong>1</strong>条待审核）</li>
+              <li class="list-group-item" id="post"></li>
+              <li class="list-group-item" id="category"></li>
+              <li class="list-group-item" id="comment"></li>
             </ul>
           </div>
         </div>
@@ -95,5 +90,6 @@
   <script src="../assets/vendors/bootstrap/js/bootstrap.js"></script>
   <script>NProgress.done()</script>
   <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/index.js"></script>
 </body>
 </html>
